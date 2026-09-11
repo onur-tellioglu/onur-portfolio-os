@@ -25,9 +25,7 @@ const PROJECT_FOLDERS = {
         stack: "Python · ctypes · 32-bit DLL",
         year: "2026",
         body:
-`Python control for the Luna/Polytec Phoenix 1400 tunable laser
-at FAU LHFT. The vendor ships a 32-bit Phoenix.dll with examples
-for C++, LabVIEW and MATLAB, and no Python binding.
+`Python control for the Luna/Polytec Phoenix 1400 tunable laser at FAU LHFT. The vendor ships a 32-bit Phoenix.dll with examples for C++, LabVIEW and MATLAB, and no Python binding.
 
 · Loads the DLL through ctypes
 · A class that validates values and tracks laser state
@@ -40,9 +38,7 @@ for C++, LabVIEW and MATLAB, and no Python binding.
         stack: "Python · FTDI FT232H · Ibsen I-MON 256",
         year: "2026",
         body:
-`Custom acquisition and analysis software for an Ibsen I-MON 256
-USB fiber Bragg grating interrogator, replacing the vendor
-evaluation tool.
+`Custom acquisition and analysis software for an Ibsen I-MON 256 USB fiber Bragg grating interrogator, replacing the vendor evaluation tool.
 
 · Raw reflection spectra at up to ~6000 frames/s
 · Peak tracking and calibration
@@ -55,8 +51,7 @@ evaluation tool.
         stack: "Raspberry Pi Pico · SPI · AD9910/PCBZ",
         year: "2026",
         body:
-`Drives an AD9910 evaluation board from a Raspberry Pi Pico
-instead of the Analog Devices USB stack and PC software.
+`Drives an AD9910 evaluation board from a Raspberry Pi Pico instead of the Analog Devices USB stack and PC software.
 
 · Registers read back exact
 · IO_UPDATE latches writes
@@ -69,9 +64,7 @@ instead of the Analog Devices USB stack and PC software.
         stack: "linux-gpib · NI GPIB-USB-HS · Bash",
         year: "2026",
         body:
-`One-shot installer that rebuilds the lab PC's GPIB stack.
-Ubuntu ships no GPIB driver at all, so linux-gpib is built
-from source and pinned.
+`One-shot installer that rebuilds the lab PC's GPIB stack. Ubuntu ships no GPIB driver at all, so linux-gpib is built from source and pinned.
 
 · Compat bridge for the kernel 6.16+ timer API
 · Update freeze so kernel upgrades cannot break it
@@ -84,9 +77,7 @@ from source and pinned.
         stack: "OpenSCAD · Prusa MK4 · PLA/PETG",
         year: "2026",
         body:
-`3D-printed mounts that put the lab's closed instrument network
-onto the bench: switch brackets for a 40 x 80 T-slot profile
-and a replacement end cap for a power strip.
+`3D-printed mounts that put the lab's closed instrument network onto the bench: switch brackets for a 40 x 80 T-slot profile and a replacement end cap for a power strip.
 
 · Modelled in OpenSCAD, PLA fit test, PETG final
 · Every load path checked before printing`,
@@ -102,9 +93,7 @@ and a replacement end cap for a power strip.
         stack: "Node.js · OpenAI API · Supabase",
         year: "2025 – 2026",
         body:
-`A fully custom system running the complete patient journey
-over WhatsApp for a surgical clinic, with no low-code tools
-or templates.
+`A fully custom system running the complete patient journey over WhatsApp for a surgical clinic, with no low-code tools or templates.
 
 · Multilingual intake, photos, booking, reminders, follow-up
 · Handles 90% of communication end to end
@@ -121,8 +110,7 @@ or templates.
         stack: "Go · SQLite · React · WebSocket",
         year: "2026",
         body:
-`Think ngrok, but self-hosted, team-aware and built around
-persistent event history.
+`Think ngrok, but self-hosted, team-aware and built around persistent event history.
 
 · Events land in SQLite before forwarding
 · Replay from CLI or dashboard
@@ -137,8 +125,7 @@ persistent event history.
         stack: "Bash · Homebrew · SwiftUI",
         year: "2026",
         body:
-`A 14-module CLI published as a Homebrew formula, pure Bash
-and dependency-free. mend is the SwiftUI app on top of it.
+`A 14-module CLI published as a Homebrew formula, pure Bash and dependency-free. mend is the SwiftUI app on top of it.
 
 · Battery, SSD wear, thermals, memory, Wi-Fi
 · FileVault, SIP and Gatekeeper checks
@@ -153,8 +140,7 @@ and dependency-free. mend is the SwiftUI app on top of it.
         stack: "Swift · SwiftUI",
         year: "2026",
         body:
-`Reviews a photo library one image at a time, learns what is
-blurry, and keeps, culls or undoes with a single gesture.
+`Reviews a photo library one image at a time, learns what is blurry, and keeps, culls or undoes with a single gesture.
 
 · Submitted to App Store review`,
         links: [],
@@ -169,8 +155,7 @@ blurry, and keeps, culls or undoes with a single gesture.
         stack: "C++ · PlatformIO · ESP32",
         year: "2026",
         body:
-`ESP32 engine control unit driven by a 9-state machine, from
-IDLE through IGNITION and RUNNING to COOLING.
+`ESP32 engine control unit driven by a 9-state machine, from IDLE through IGNITION and RUNNING to COOLING.
 
 · Hall-effect RPM, MAX31855 thermocouple over SPI
 · Solenoid valves, brushless ESC and fuel pump on PWM
@@ -187,8 +172,7 @@ IDLE through IGNITION and RUNNING to COOLING.
         stack: "Next.js · Prisma · Postgres · MinIO",
         year: "2026",
         body:
-`Storefront and admin panel for a Turkish direct-to-consumer
-fashion brand, live in production and self-hosted on one VPS.
+`Storefront and admin panel for a Turkish direct-to-consumer fashion brand, live in production and self-hosted on one VPS.
 
 · 3D Secure card payments through QNB Sanal POS
 · Refunds, back-in-stock emails, critical-error alerts
@@ -203,9 +187,7 @@ fashion brand, live in production and self-hosted on one VPS.
         stack: "React · HTML · CSS",
         year: "2026",
         body:
-`A Windows-95-themed personal portfolio with a Holo-era Android
-companion for mobile. Built on portfoliOS by Ibrahim Yağız
-Akbayrak, used with his permission.
+`A Windows-95-themed personal portfolio with a Holo-era Android companion for mobile. Built on portfoliOS by Ibrahim Yağız Akbayrak, used with his permission.
 
 · Pixel-art icon set
 · i18n in TR / EN / DE
@@ -218,8 +200,7 @@ Akbayrak, used with his permission.
         stack: "Next.js · Vercel",
         year: "2026",
         body:
-`Study platform for FAU students. More than 60% of one
-semester's exam was directly covered by the content.`,
+`Study platform for FAU students. More than 60% of one semester's exam was directly covered by the content.`,
         links: [
           { label: "fauvault.space", url: "https://fauvault.space" },
         ],
@@ -453,12 +434,7 @@ const BLOG_POSTS = [
     title: "A Python binding for a laser that only ships a 32-bit DLL",
     tags: ["lab", "python", "ctypes"],
     body:
-`The Phoenix 1400 tunable laser comes with a 32-bit Phoenix.dll
-and examples for C++, LabVIEW and MATLAB, but nothing for Python.
-The binding I wrote loads the DLL through ctypes and puts a class
-in front of it that checks every value and knows what state the
-laser is in. It shipped in four rounds, each signed off on the
-real laser before it was merged.`,
+`The Phoenix 1400 tunable laser comes with a 32-bit Phoenix.dll and examples for C++, LabVIEW and MATLAB, but nothing for Python. The binding I wrote loads the DLL through ctypes and puts a class in front of it that checks every value and knows what state the laser is in. It shipped in four rounds, each signed off on the real laser before it was merged.`,
   },
   {
     id: "p4",
@@ -468,11 +444,7 @@ real laser before it was merged.`,
     title: "Driving an AD9910 from a Raspberry Pi Pico",
     tags: ["lab", "rf", "embedded"],
     body:
-`The lab's AD9910 evaluation board normally talks to a PC through
-Analog Devices' USB interface. I replaced that with a Raspberry
-Pi Pico over SPI. Registers read back exactly what was written,
-and the DAC tone tracks the programmed tuning word to within
-1 ppm. Most of the work was jumpers and pinouts, not code.`,
+`The lab's AD9910 evaluation board normally talks to a PC through Analog Devices' USB interface. I replaced that with a Raspberry Pi Pico over SPI. Registers read back exactly what was written, and the DAC tone tracks the programmed tuning word to within 1 ppm. Most of the work was jumpers and pinouts, not code.`,
   },
   {
     id: "p3",
@@ -482,10 +454,7 @@ and the DAC tone tracks the programmed tuning word to within
     title: "Joining the FAU photonics lab as a HiWi",
     tags: ["lab", "fau", "hiwi"],
     body:
-`I started as a student research assistant at the Institute of
-Microwaves and Photonics, between instruments and software. The
-first weeks went into the bench itself and into making the lab
-PC's GPIB stack survive kernel upgrades on Ubuntu 24.04.`,
+`I started as a student research assistant at the Institute of Microwaves and Photonics, between instruments and software. The first weeks went into the bench itself and into making the lab PC's GPIB stack survive kernel upgrades on Ubuntu 24.04.`,
   },
   {
     id: "p2",
@@ -495,10 +464,7 @@ PC's GPIB stack survive kernel upgrades on Ubuntu 24.04.`,
     title: "PomeloHook: store first, forward second",
     tags: ["go", "infra", "sqlite"],
     body:
-`Every event lands in SQLite before it is forwarded. If the
-forward fails, the event is still there and can be replayed from
-the CLI or the dashboard. One Go binary, React dashboard embedded,
-pure-Go SQLite so the build needs no C toolchain.`,
+`Every event lands in SQLite before it is forwarded. If the forward fails, the event is still there and can be replayed from the CLI or the dashboard. One Go binary, React dashboard embedded, pure-Go SQLite so the build needs no C toolchain.`,
   },
   {
     id: "p1",
@@ -508,10 +474,7 @@ pure-Go SQLite so the build needs no C toolchain.`,
     title: "From computer engineering to AI at FAU",
     tags: ["meta", "education"],
     body:
-`After a year of computer engineering at Istanbul Arel University
-I transferred to FAU Erlangen-Nürnberg to study Artificial
-Intelligence. The plan: keep building real systems on the side
-while the degree fills in the theory underneath them.`,
+`After a year of computer engineering at Istanbul Arel University I transferred to FAU Erlangen-Nürnberg to study Artificial Intelligence. The plan: keep building real systems on the side while the degree fills in the theory underneath them.`,
   },
 ];
 
