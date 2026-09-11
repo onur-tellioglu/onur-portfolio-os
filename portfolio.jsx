@@ -10,118 +10,147 @@ const SECTION_SCROLL_PAD = 12;
 
 const PUBLICATIONS = [
   {
-    file: "coskuner-weber_2026_ai_ensembles_synuclein.pdf",
-    title: "How do AI ensemble pipelines treat disorder? A head-to-head comparison on α-synuclein",
-    authors: "Coskuner-Weber O, Akkum FI, Caglayan SI, Akbayrak IY, Uversky VN, Eyuboglu S",
-    journal: "J. Biomol. Struct. Dyn.", year: "2026", topic: "AI · IDPs",
-    abstract: "Head-to-head benchmarking of modern AI ensemble pipelines on the intrinsically disordered protein α-synuclein, characterizing how each method represents disorder, ensemble heterogeneity and biologically relevant conformational states.",
-    doi: "10.1080/07391102.2026.2630328",
-    url: "https://doi.org/10.1080/07391102.2026.2630328",
+    file: "phoenix1400.prj",
+    title: "phoenix1400-python: Tunable Laser Control Library",
+    authors: "Python · ctypes · 32-bit DLL · Windows",
+    journal: "FAU LHFT", year: "2026", topic: "Instrument Control",
+    abstract: "Python control for the Luna/Polytec Phoenix 1400 tunable laser at the FAU photonics lab. The vendor ships a 32-bit DLL with C++, LabVIEW and MATLAB examples and no Python binding, so this one loads it through ctypes behind a class that validates values and tracks what state the laser is in. You write a script instead of clicking through the vendor GUI. Delivered in four rounds, each signed off on the real laser before merge.",
+    doi: "", url: "",
   },
   {
-    file: "akbayrak_2022_sars-cov-2_mpro.pdf",
-    title: "Insights into the structural properties of SARS-CoV-2 main protease",
-    authors: "Akbayrak IY, Caglayan SI, Kurgan L, Uversky VN, Coskuner-Weber O",
-    journal: "Curr. Res. Struct. Biol.", year: "2022", topic: "Viral Biophysics",
-    abstract: "Computational analysis of the SARS-CoV-2 main protease (Mpro), focusing on dynamic structural properties, disorder propensity, and druggable conformational states relevant to antiviral discovery.",
-    doi: "10.1016/j.crstbi.2022.11.001",
-    url: "https://doi.org/10.1016/j.crstbi.2022.11.001",
+    file: "imon-fbg.prj",
+    title: "imon-fbg: Fiber Bragg Grating Acquisition Software",
+    authors: "Python · FTDI FT232H · Ibsen I-MON 256 USB",
+    journal: "FAU LHFT", year: "2026", topic: "Acquisition · Optics",
+    abstract: "Custom acquisition and analysis software for an Ibsen I-MON 256 USB fiber Bragg grating interrogator, replacing the vendor evaluation tool. The device streams raw FBG reflection spectra at up to ~6000 frames per second over an FTDI FT232H; the software handles high-speed capture, peak tracking, calibration and a live wavelength-versus-time display.",
+    doi: "", url: "",
   },
   {
-    file: "akbayrak_2021_mers-cov_macro_domain.pdf",
-    title: "Structures of MERS-CoV macro domain in aqueous solution with dynamics: Impacts of parallel tempering simulation techniques and force field parameters",
-    authors: "Akbayrak IY, Caglayan SI, Durdagi S, et al.",
-    journal: "Proteins", year: "2021", topic: "Molecular Dynamics",
-    abstract: "Replica-exchange molecular dynamics (REMD) simulations of the MERS-CoV macro domain in aqueous solution. Compares parallel-tempering techniques and force-field parameter choices on the resulting conformational ensemble.",
-    doi: "10.1002/prot.26150",
-    url: "https://doi.org/10.1002/prot.26150",
+    file: "ad9910-pico.prj",
+    title: "ad9910-pico: DDS Signal Generation over SPI",
+    authors: "Raspberry Pi Pico · SPI · AD9910/PCBZ Rev G",
+    journal: "FAU LHFT", year: "2026", topic: "RF · Embedded",
+    abstract: "Driving an AD9910 direct digital synthesis evaluation board from a Raspberry Pi Pico instead of the Analog Devices USB stack and PC software. The link works end to end: registers read back exact, IO_UPDATE latches writes, and the DAC produces a tone that tracks the programmed tuning word to within 1 ppm. Every pinout trap and bench measurement is written down rather than assumed.",
+    doi: "", url: "",
   },
   {
-    file: "akbayrak_2020_idp_neurodegenerative_review.pdf",
-    title: "Current Challenges and Limitations in the Studies of Intrinsically Disordered Proteins in Neurodegenerative Diseases by Computer Simulations",
-    authors: "Akbayrak IY, Caglayan SI, Ozcan Z, Uversky VN, Coskuner-Weber O",
-    journal: "Curr. Alzheimer Res.", year: "2020", topic: "Review · IDPs",
-    abstract: "A review of the computational toolkit for intrinsically disordered proteins (IDPs) in neurodegenerative disease — force fields, enhanced sampling, ensemble analysis — and the open challenges in modelling their disordered states.",
-    doi: "10.2174/1567205017666201109094908",
-    url: "https://doi.org/10.2174/1567205017666201109094908",
+    file: "pomelohook.prj",
+    title: "PomeloHook: Self-Hosted Webhook Relay",
+    authors: "Go · SQLite · React · Vite · WebSocket",
+    journal: "hook.pomelostudios.net", year: "2026", topic: "Infrastructure",
+    abstract: "Think ngrok, but self-hosted, team-aware and built around persistent event history. A Go server plus CLI binary with an embedded React/Vite dashboard. Events land in SQLite before forwarding over the WebSocket tunnel, so they stay replayable from CLI or dashboard regardless of forwarding outcome. Personal and org tunnels, 30-day retention, single binary deployment.",
+    doi: "", url: "https://hook.pomelostudios.net",
   },
   {
-    file: "akbayrak_2020_mers-cov_macro_remd_dl_preprint.pdf",
-    title: "Structures of MERS-CoV Macro Domain: Coupling Replica Exchange Molecular Dynamics and Deep Learning at the Nano Level",
-    authors: "Akbayrak IY, et al.",
-    journal: "Preprint", year: "2020", topic: "REMD · Deep Learning",
-    abstract: "Pre-print combining replica-exchange molecular dynamics with deep-learning analysis to characterize the conformational landscape of the MERS-CoV macro domain at the nanoscale.",
-    doi: "10.22541/au.159646074.43956314",
-    url: "https://doi.org/10.22541/au.159646074.43956314",
+    file: "turbin-ecu.prj",
+    title: "turbin-ecu: Micro-Turbine Engine Controller",
+    authors: "C++ · PlatformIO · ESP32",
+    journal: "Embedded", year: "2026", topic: "FSM · Sensors",
+    abstract: "An ESP32 engine control unit driven by a 9-state machine: IDLE, PRE_HEAT, IGNITION, WARMUP, RAMP_UP, RUNNING, SHUTDOWN, COOLING. Interrupt-driven Hall-effect RPM, a MAX31855 thermocouple over SPI and a throttle ADC on the input side; MOSFET-driven solenoid valves, a brushless ESC and a fuel pump on PWM at the output. Runs in desktop simulation through the PlatformIO native target.",
+    doi: "", url: "",
+  },
+  {
+    file: "assistbase.prj",
+    title: "Assistbase: Patient Journey over WhatsApp",
+    authors: "Node.js · OpenAI API · Supabase · Next.js",
+    journal: "Production", year: "2025", topic: "LLM Agents",
+    abstract: "A fully custom system running the complete patient journey over WhatsApp for a surgical clinic, with no low-code tools or templates: multilingual intake, photo and health data collection, booking, reminders, post-op follow-up. It handles 90% of communication end to end and escalates to staff only when needed, backed by a memory system that parses every conversation into a structured patient profile.",
+    doi: "", url: "",
+  },
+  {
+    file: "ctscan.prj",
+    title: "ctscan & mend: macOS System Health",
+    authors: "Bash · Homebrew · SwiftUI",
+    journal: "Open source", year: "2026", topic: "CLI · macOS",
+    abstract: "A 14-module CLI published as a Homebrew formula, pure Bash and dependency-free: battery, SSD wear via S.M.A.R.T., thermals, memory, Wi-Fi, FileVault, SIP and Gatekeeper. mend is the SwiftUI macOS app wrapping that engine through the Process API, with menu bar integration and a background scan timer. The commercial app and the open-source tool are intentionally separate.",
+    doi: "", url: "https://onur-tellioglu.github.io/ctscan/",
+  },
+  {
+    file: "cull.prj",
+    title: "Cull: Swipe-to-Cull iOS Photo Manager",
+    authors: "Swift · SwiftUI · Vision",
+    journal: "App Store review", year: "2026", topic: "iOS",
+    abstract: "A SwiftUI app that reviews a photo library one image at a time, learns what is blurry, and lets you keep, cull or undo with a single gesture. Submitted to App Store review.",
+    doi: "", url: "",
   },
 ];
 
 const SKILLS = [
-  "Python","MATLAB","R","Java","JavaScript","PHP",
-  "HTML5","CSS3","WordPress",
-  "Git","GROMACS","NWChem","VMD","AI/ML",
+  "Python","TypeScript","Go","Swift","C++","Bash",
+  "React","Next.js","Node.js","PostgreSQL",
+  "Docker","Git","SQL","AI/LLM",
 ];
 
 const SKILL_NOTES = {
-  Python:     "Primary language. NumPy, pandas, MDAnalysis, PyTorch.",
-  MATLAB:     "Numerical analysis & signal processing from materials-science coursework.",
-  R:          "Statistical analysis & visualization of experimental and simulation data.",
-  Java:       "Algorithms & data-structures coursework at FAU Erlangen-Nürnberg.",
-  JavaScript: "Front-end prototypes, lightweight tooling, this very portfoliOS.",
-  PHP:        "WordPress theme/plugin work and back-office tooling for client sites.",
-  HTML5:      "Semantic markup, accessibility-aware structure.",
-  CSS3:       "Layouts with grid/flex, animation, retro UI fidelity.",
-  WordPress:  "Custom themes, Elementor, WP Rocket and RankMath for multilingual sites.",
-  Git:        "Branching workflows, code review, reproducible research repos.",
-  GROMACS:    "All-atom MD: setup, equilibration, production, REMD, trajectory analysis.",
-  NWChem:     "Quantum-chemistry calculations alongside classical MD pipelines.",
-  VMD:        "Trajectory visualization, scripting and figure preparation for publications.",
-  "AI/ML":    "PyTorch, ensemble methods and multi-agent systems for biomolecular data.",
+  Python:       "Data work, tooling and coursework at FAU. NumPy, pandas, PyTorch.",
+  TypeScript:   "Primary language for web and backend work. Strict mode, end-to-end typed APIs.",
+  Go:           "PomeloHook server and CLI: pure-Go SQLite, WebSocket tunnels, single binary builds.",
+  Swift:        "SwiftUI on iOS and macOS: Cull, mend, PhotoBackup, plus a native WidgetKit widget.",
+  "C++":        "Embedded firmware on ESP32 with PlatformIO: interrupts, SPI, PWM, state machines.",
+  Bash:         "ctscan is 14 modules of pure Bash, no dependencies. Shipped as a Homebrew formula.",
+  React:        "Dashboards and product UIs, from Vite SPAs to embedded panels inside Go binaries.",
+  "Next.js":    "App Router, server components, static export. The stack behind most product sites.",
+  "Node.js":    "Agent backends, WhatsApp integrations and API services in production.",
+  PostgreSQL:   "Prisma schemas, migrations and per-tenant row-level security covered by tests.",
+  Docker:       "Local parity and deployment for monorepos; compose stacks for multi-app projects.",
+  Git:          "Feature branches, atomic commits, code review, CI on every pull request.",
+  SQL:          "Query design and indexing against Postgres and SQLite workloads.",
+  "AI/LLM":     "Claude and OpenAI APIs, agent orchestration, tool calling, RAG and memory systems.",
 };
 
 const EXPERIENCE = [
   {
-    period: "2025 – Present",
-    role: "Co-founder & CTO",
-    org: "HumanAI Dynamics — TÜBİTAK BiGG · Dijitalpark Teknokent",
+    period: "Jun 2026 – Present",
+    role: "Student Research Assistant (HiWi)",
+    org: "FAU, Institute of Microwaves and Photonics (LHFT), Erlangen",
     bullets: [
-      "Co-founding a Disorder-Aware MultiAgent AI platform for drug discovery & biomarker development",
-      "Architecting the end-to-end physics + AI + multi-agent RL stack (BioMatics, iPocket, AI/MD ensembles)",
-      "Currently progressing through the TÜBİTAK 1512 BiGG entrepreneurship programme",
+      "Python control library for a Luna/Polytec Phoenix 1400 tunable laser, built on ctypes over the vendor's 32-bit DLL",
+      "Custom acquisition software for an Ibsen I-MON 256 fiber Bragg grating interrogator, ~6000 frames/s over FTDI",
+      "AD9910 DDS evaluation board driven over SPI from a Raspberry Pi Pico, tone accurate to 1 ppm",
+      "Rebuilt the lab's GPIB stack on Ubuntu 24.04 as a one-shot installer with an update freeze",
     ],
-    icon: "flask",
+    icon: "chip",
   },
   {
-    period: "May 2025 – Present",
-    role: "Webentwickler (Work Study)",
-    org: "Schmetterling International GmbH & Co. KG — Geschwand, Germany",
+    period: "Feb 2025 – Jan 2026",
+    role: "Co-Founder & Lead Developer",
+    org: "Assistbase, Remote",
     bullets: [
-      "WordPress development and maintenance for one of Europe's largest independent travel-trade groups",
-      "On-site role at the company HQ in Geschwand",
+      "Built a custom system running the full patient journey over WhatsApp for a surgical clinic",
+      "Designed a multi-dimensional patient memory system persisted in Supabase",
+      "Delivered a paperless operations platform for a German manufacturing facility, live in production",
+    ],
+    icon: "robot",
+  },
+  {
+    period: "Jul 2023 – Oct 2023",
+    role: "Chief IT Consultant",
+    org: "Metarc Interior, Istanbul",
+    bullets: [
+      "Rebuilt the full IT infrastructure of a corporate architecture firm",
+      "Secure offsite backup, office telephony and cybersecurity hardening",
     ],
     icon: "globe",
   },
   {
-    period: "Mar 2022 – Mar 2024",
-    role: "IT Manager",
-    org: "Prof. Dr. Ferit Demirkan — Nürnberg, Germany",
+    period: "Aug 2022 – Sept 2022",
+    role: "Software Developer Intern",
+    org: "HEFA Technology, Istanbul",
     bullets: [
-      "Built and maintained multilingual websites (TR / DE / EN) and managed IT infrastructure",
-      "On-page SEO optimization, performance tuning and technical documentation",
-      "Translation of medical documents across three languages (TR / DE / EN)",
+      "Contributed to airpm.io, an air quality monitoring platform",
+      "Integrated IoT sensors over LoRa-WAN and The Things Network, built ingestion WebHooks",
     ],
-    icon: "globe",
+    icon: "chip",
   },
   {
-    period: "Nov 2020 – Dec 2021",
-    role: "Scholarship Researcher",
-    org: "TÜBİTAK – BİLGEM, Istanbul",
+    period: "Dec 2020 – Jun 2023",
+    role: "Technical Writer & Web Administrator",
+    org: "ModArt PC, Istanbul",
     bullets: [
-      "Ran molecular dynamics simulations of proteins using REMD, GROMACS and NWChem",
-      "Co-authored 5 peer-reviewed publications in computational biophysics",
-      "Completed the GAMES, GROMACS & NWChem MD training (TÜBİTAK, Nov 2020 – Feb 2021)",
+      "Wrote SEO-optimized tech news, buying guides and in-depth hardware reviews",
+      "Hands-on benchmark testing; managed DNS, SSL, Cloudflare and security hardening",
     ],
-    icon: "molecule",
+    icon: "globe",
   },
 ];
 
@@ -140,7 +169,7 @@ const Hero = ({ onNav, onOpenPub }) => {
           fontSize: 46, lineHeight: 1.02, margin: "0 0 12px",
           fontWeight: 700, letterSpacing: "-0.01em",
         }}>
-          Ibrahim Yağız<br/>Akbayrak
+          Onur<br/>Tellioglu
         </h1>
         <div style={{
           display: "inline-flex", alignItems: "center", gap: 6,
@@ -162,7 +191,7 @@ const Hero = ({ onNav, onOpenPub }) => {
           <button className="btn" onClick={() => onNav("contact")}>
             <IconMail size={16}/> {t("hero.btnContact")}
           </button>
-          <button className="btn" onClick={() => alert(t("hero.cvAlert"))}>
+          <button className="btn" onClick={() => window.open("portfolios-assets/onur_tellioglu_cv.pdf", "_blank")}>
             <IconFloppy size={16}/> {t("hero.btnCV")}
           </button>
         </div>
@@ -172,9 +201,9 @@ const Hero = ({ onNav, onOpenPub }) => {
 
     {/* Stat cards */}
     <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 22 }}>
-      <StatCard icon={<IconDoc size={26}/>} big="5" label={t("stat.pubs")}/>
-      <StatCard icon={<IconComputer size={26}/>} big="CS" label={t("stat.cs")}/>
-      <StatCard icon={<IconGlobe size={26}/>} big="R&amp;W" label={t("stat.rw")}/>
+      <StatCard icon={<IconDoc size={26}/>} big={String(PUBLICATIONS.length)} label={t("stat.pubs")}/>
+      <StatCard icon={<IconComputer size={26}/>} big="AI" label={t("stat.cs")}/>
+      <StatCard icon={<IconGlobe size={26}/>} big="TR&middot;EN&middot;DE" label={t("stat.rw")}/>
     </div>
   </section>
   );
@@ -204,8 +233,8 @@ const About = () => {
     <SectionHeader title={t("sec.about.title")} sub={t("sec.about.sub")}/>
     <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 8 }}>
       <AboutCard icon={<IconComputer size={28}/>} title={t("about.cs.title")}  body={t("about.cs.body")}/>
-      <AboutCard icon={<IconMolecule size={28}/>} title={t("about.cb.title")}  body={t("about.cb.body")}/>
-      <AboutCard icon={<IconResearch size={28}/>} title={t("about.rd.title")}  body={t("about.rd.body")}/>
+      <AboutCard icon={<IconChip size={28}/>} title={t("about.cb.title")}  body={t("about.cb.body")}/>
+      <AboutCard icon={<IconRobot size={28}/>} title={t("about.rd.title")}  body={t("about.rd.body")}/>
       <AboutCard icon={<IconGlobe size={28}/>}    title={t("about.web.title")} body={t("about.web.body")}/>
     </div>
   </section>
@@ -294,7 +323,7 @@ const Research = ({ onOpenPub }) => {
           flex: 1, background: "#fff", padding: "2px 6px",
           boxShadow: "var(--bevel-thin-in)", fontFamily:'"Courier New", monospace',
         }}>
-          C:\portfolio\research\publications\
+          C:\portfolio\projects\
         </code>
         <span style={{ color: "var(--text-dim)" }}>{PUBLICATIONS.length} {t("sec.research.items")}</span>
       </div>
@@ -389,9 +418,10 @@ const Experience = () => {
                 </ul>
               </div>
               <div style={{ display: "grid", placeItems: "start" }}>
-                {e.icon === "flask" && <IconFlask size={32}/>}
+                {e.icon === "chip" && <IconChip size={32}/>}
                 {e.icon === "globe" && <IconGlobe size={32}/>}
-                {e.icon === "molecule" && <IconMolecule size={32}/>}
+                {e.icon === "robot" && <IconRobot size={32}/>}
+                {e.icon === "briefcase" && <IconBriefcase size={32}/>}
               </div>
             </div>
           </div>
@@ -451,13 +481,12 @@ const Contact = () => {
 
       {/* contact links */}
       <div className="field" style={{ padding: 8 }}>
-        <ContactRow icon={<IconMail size={20}/>}    label={t("contact.email")}    value="ibrahimyagizakbayrak@gmail.com" href="mailto:ibrahimyagizakbayrak@gmail.com"/>
-        <ContactRow icon={<IconLinkedIn size={20}/>} label={t("contact.linkedin")} value="linkedin.com/in/iyagiz-akbayrak" href="https://www.linkedin.com/in/iyagiz-akbayrak/"/>
-        <ContactRow icon={<IconGitHub size={20}/>}   label={t("contact.github")}   value="github.com/akbayrakyagiz" href="https://github.com/akbayrakyagiz"/>
-        <ContactRow icon={<IconBriefcase size={20}/>} label={t("contact.studio")}   value="github.com/Pomelo-Studios" href="https://github.com/Pomelo-Studios"/>
-        <ContactRow icon={<IconDiploma size={20}/>}  label={t("contact.orcid")}    value="0000-0001-9611-0965" href="https://orcid.org/0000-0001-9611-0965"/>
+        <ContactRow icon={<IconMail size={20}/>}    label={t("contact.email")}    value="onur.tellioglu@fau.de" href="mailto:onur.tellioglu@fau.de"/>
+        <ContactRow icon={<IconGitHub size={20}/>}   label={t("contact.github")}   value="github.com/onur-tellioglu" href="https://github.com/onur-tellioglu"/>
+        <ContactRow icon={<IconGlobe size={20}/>}     label={t("contact.site")}     value="onurtellioglu.com" href="https://onurtellioglu.com"/>
+        <ContactRow icon={<IconBook size={20}/>}      label={t("contact.studio")}   value="fauvault.space" href="https://fauvault.space"/>
         <ContactRow icon={<IconPin size={20}/>}      label={t("contact.location")} value={t("contact.locationVal")}/>
-        <ContactRow icon={<IconFloppy size={20}/>}   label={t("contact.cv")}       value="yagiz_cv.pdf" href="#"/>
+        <ContactRow icon={<IconFloppy size={20}/>}   label={t("contact.cv")}       value="onur_tellioglu_cv.pdf" href="portfolios-assets/onur_tellioglu_cv.pdf"/>
       </div>
     </div>
   </section>
@@ -530,10 +559,14 @@ const PublicationModal = ({ pub, onClose, bringToFront, z }) => {
           {pub.abstract}
         </div>
         <div style={{ marginTop: 10, display: "flex", gap: 6, alignItems: "center" }}>
-          <span style={{ color: "var(--text-dim)" }}>{t("pub.doi")}</span>
-          <code style={{ fontFamily:'"Courier New", monospace' }}>{pub.doi}</code>
+          {pub.doi && (<>
+            <span style={{ color: "var(--text-dim)" }}>{t("pub.doi")}</span>
+            <code style={{ fontFamily:'"Courier New", monospace' }}>{pub.doi}</code>
+          </>)}
           <div style={{ marginLeft: "auto", display: "flex", gap: 6 }}>
-            <button className="btn" onClick={() => pub.url && window.open(pub.url, "_blank", "noreferrer")}>{t("pub.openNew")}</button>
+            {pub.url && (
+              <button className="btn" onClick={() => window.open(pub.url, "_blank", "noreferrer")}>{t("pub.openNew")}</button>
+            )}
             <button className="btn primary" onClick={onClose}>{t("pub.ok")}</button>
           </div>
         </div>

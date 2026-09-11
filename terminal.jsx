@@ -20,7 +20,7 @@ const TERMINAL_FS = {
   },
   "~/projects": {
     type: "dir",
-    children: ["portfolio_os.md", "md_pipeline.py", "retro_ui_kit.css"],
+    children: ["portfolio_os.md", "phoenix.py", "relay.go", "retro_ui_kit.css"],
   },
   "~/secrets": {
     type: "dir",
@@ -29,20 +29,20 @@ const TERMINAL_FS = {
   "~/about.txt": {
     type: "file",
     content:
-`Hi, I'm Ibrahim Yağız Akbayrak.
-B.Sc. Computer Science @ FAU Erlangen-Nürnberg.
-Computational biophysics · 5 peer-reviewed publications.
-Co-founding HumanAI Dynamics — disorder-aware multi-agent AI.
-TR / EN / DE · Nürnberg, Germany.`,
+`Hi, I'm Onur Tellioglu.
+B.Sc. Artificial Intelligence @ FAU Erlangen-Nürnberg.
+Research assistant (HiWi) in the FAU photonics lab (LHFT).
+Instrument software · LLM agents · embedded systems.
+TR / EN / DE · Nuremberg, Germany.`,
   },
   "~/skills.txt": {
     type: "file",
     content:
-`Languages : Python, MATLAB, R, Java, JavaScript, PHP
-Web       : HTML5, CSS3, WordPress (Elementor, WP Rocket, RankMath)
-Research  : GROMACS, NWChem, VMD, GAMES
-Tools     : Git, MS Office, Unity 2D
-Methods   : MD, REMD, K-means clustering, AI ensembles`,
+`Languages : Python, TypeScript, Go, Swift, C++, Bash, SQL
+Web       : Node.js, Next.js, React, Supabase, Prisma, PostgreSQL
+Embedded  : ESP32, Raspberry Pi Pico, SPI/UART/ADC, DDS, GPIB
+AI        : Claude API, OpenAI API, agents, tool calling, RAG
+Tools     : Git, Docker, GitHub Actions, OpenSCAD, PlatformIO`,
   },
   "~/fun.txt": {
     type: "file",
@@ -55,15 +55,26 @@ Methods   : MD, REMD, K-means clustering, AI ensembles`,
     type: "file",
     content:
 `# portfoliOS
-A Windows-95-themed personal site. You are inside it now.`,
+A Windows-95-themed personal site. You are inside it now.
+Built on portfoliOS by Ibrahim Yağız Akbayrak, used with permission.`,
   },
-  "~/projects/md_pipeline.py": {
+  "~/projects/phoenix.py": {
     type: "file",
     content:
-`# Trajectory analysis pipeline
-import mdanalysis as mda  # placeholder
-def analyze(traj):
-    return "RMSD, RMSF, contact maps"`,
+`# Phoenix 1400 tunable laser, driven from Python
+from phoenix1400 import Phoenix
+laser = Phoenix()            # loads the 32-bit DLL via ctypes
+laser.set_wavelength(1550.0) # nm, validated before it reaches the DLL
+laser.enable()`,
+  },
+  "~/projects/relay.go": {
+    type: "file",
+    content:
+`// PomeloHook: store first, forward second
+func handle(ev Event) {
+    db.Save(ev)      // SQLite, always
+    tunnel.Send(ev)  // may fail; replay later
+}`,
   },
   "~/projects/retro_ui_kit.css": {
     type: "file",
@@ -168,7 +179,7 @@ const Terminal = ({ onClose }) => {
   React.useEffect(() => {
     // boot banner
     setLines([
-      { text: "yagiz-os v1.0.0  ©  type 'help' for commands.", bold: true },
+      { text: "onur-os v1.0.0  ©  type 'help' for commands.", bold: true },
       { text: "" },
     ]);
   }, []);
@@ -251,7 +262,7 @@ const Terminal = ({ onClose }) => {
         print(new Date().toString());
         break;
       case "whoami":
-        print("guest@yagiz-os");
+        print("guest@onur-os");
         break;
       case "history":
         history.forEach((h, i) => print(`  ${String(i+1).padStart(3)}  ${h}`));
@@ -277,7 +288,7 @@ const Terminal = ({ onClose }) => {
       }
       case "neofetch":
         printLines(
-`            ░░░░░       guest@yagiz-os
+`            ░░░░░       guest@onur-os
        ░░░░██░░░░       ----------------
     ░░██████░░░░░░      OS:      portfoliOS 1.0
    ██████░░░░░░░░░░     Host:    a draggable browser window
@@ -307,9 +318,9 @@ const Terminal = ({ onClose }) => {
         tick();
         break;
       }
-      case "yagiz":
-      case "ibrahim":
-        print("hi! 👋  (try 'cat about.txt')", { color: T.accent });
+      case "onur":
+      case "tellioglu":
+        print("hi!  (try 'cat about.txt')", { color: T.accent });
         break;
       default:
         print(`command not found: ${c}`, { color: "#ff7a7a" });
@@ -317,7 +328,7 @@ const Terminal = ({ onClose }) => {
     }
   };
 
-  const prompt = () => `guest@yagiz-os:${cwd}$ `;
+  const prompt = () => `guest@onur-os:${cwd}$ `;
 
   const onKey = (e) => {
     if (closing) { e.preventDefault(); return; }
@@ -438,7 +449,7 @@ const TerminalWindow = ({ z, onFocus, onClose, onMin }) => (
       y: 90 + Math.random()*20,
       w: 560, h: 380,
     }}
-    title={<><IconTerminal size={14}/> Terminal — yagiz@shell</>}
+    title={<><IconTerminal size={14}/> Terminal: onur@shell</>}
     z={z}
     onFocus={onFocus}
     onMin={onMin}

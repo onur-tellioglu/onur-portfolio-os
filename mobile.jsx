@@ -48,7 +48,7 @@ const MOBILE_STRINGS = {
   /* App labels (under icons) */
   "app.me":          { en: "Me",          tr: "Ben",          de: "Ich" },
   "app.skills":      { en: "Skills",      tr: "Yetenekler",   de: "Können" },
-  "app.research":    { en: "Research",    tr: "Araştırma",   de: "Forschung" },
+  "app.research": { en: "Work", tr: "İşler", de: "Arbeiten" },
   "app.projects":    { en: "Projects",    tr: "Projeler",     de: "Projekte" },
   "app.experience":  { en: "Experience",  tr: "Deneyim",      de: "Erfahrung" },
   "app.blog":        { en: "Blog",        tr: "Blog",         de: "Blog" },
@@ -71,13 +71,13 @@ const MOBILE_STRINGS = {
   /* Skills app */
   "sk.lang":         { en: "Languages",   tr: "Diller",       de: "Sprachen" },
   "sk.frame":        { en: "Frameworks & Libs", tr: "Çatılar & Kütüphaneler", de: "Frameworks & Libs" },
-  "sk.web":          { en: "Web & Markup", tr: "Web & İşaret", de: "Web & Markup" },
+  "sk.web": { en: "Web & Backend", tr: "Web & Backend", de: "Web & Backend" },
   "sk.tools":        { en: "Tooling & Infra", tr: "Araçlar & Altyapı", de: "Werkzeuge & Infra" },
   "sk.data":         { en: "Data",        tr: "Veri",         de: "Daten" },
-  "sk.science":      { en: "Scientific",  tr: "Bilimsel",     de: "Wissenschaftlich" },
+  "sk.science": { en: "AI & Agents", tr: "YZ & Ajanlar", de: "KI & Agenten" },
 
   /* Research */
-  "re.allPubs":      { en: "All publications", tr: "Tüm yayınlar", de: "Alle Publikationen" },
+  "re.allPubs": { en: "All projects", tr: "Tüm projeler", de: "Alle Projekte" },
 
   /* Projects */
   "pj.root":         { en: "All projects", tr: "Tüm projeler", de: "Alle Projekte" },
@@ -85,7 +85,7 @@ const MOBILE_STRINGS = {
 
   /* Mail */
   "mail.inbox":      { en: "Inbox",       tr: "Gelen Kutusu", de: "Posteingang" },
-  "mail.from":       { en: "From Yağız", tr: "Yağız'dan",   de: "Von Yağız" },
+  "mail.from": { en: "From Onur", tr: "Onur'dan", de: "Von Onur" },
   "mail.replyHere":  { en: "Reach me directly:", tr: "Doğrudan ulaş:", de: "Direkt erreichen:" },
 
   /* Photos */
@@ -106,9 +106,7 @@ const MOBILE_STRINGS = {
 
   /* Phone */
   "phone.dial":      { en: "Dial",        tr: "Çevir",        de: "Wählen" },
-  "phone.contact":   { en: "Use email or LinkedIn instead — I rarely pick up unknown numbers.",
-                       tr: "Bunun yerine e-posta veya LinkedIn kullan — bilinmeyen numaraları nadiren açıyorum.",
-                       de: "Bitte stattdessen E-Mail oder LinkedIn — unbekannte Nummern gehe ich selten ran." },
+  "phone.contact": { en: "Use email or GitHub instead. I rarely pick up unknown numbers.", tr: "Bunun yerine e-posta veya GitHub kullan; bilinmeyen numaraları nadiren açıyorum.", de: "Bitte stattdessen E-Mail oder GitHub. Unbekannte Nummern gehe ich selten ran." },
   "phone.calling":   { en: "Calling…",     tr: "Aranıyor…",     de: "Anrufen…" },
   "phone.ringing":   { en: "Ringing…",     tr: "Çalıyor…",      de: "Es klingelt…" },
   "phone.unknown":   { en: "Unknown number", tr: "Bilinmeyen numara", de: "Unbekannte Nummer" },
@@ -125,41 +123,29 @@ const MOBILE_STRINGS = {
 
   /* Camera */
   "cam.title":       { en: "Tap to capture", tr: "Çekmek için dokun", de: "Zum Aufnehmen tippen" },
-  "cam.body":        { en: "There's no real camera — but here's a pixel-art self portrait instead.",
-                       tr: "Gerçek bir kamera yok — onun yerine bir pixel-art otoportre.",
-                       de: "Keine echte Kamera — dafür ein Pixel-Art-Selbstporträt." },
+  "cam.body": { en: "There's no real camera, so here's a placeholder portrait instead.", tr: "Gerçek bir kamera yok, onun yerine bir yer tutucu portre.", de: "Keine echte Kamera, dafür ein Platzhalter-Porträt." },
 
   /* Recents preview captions */
   "rp.me":           { en: "Profile & intro", tr: "Profil ve tanıtım", de: "Profil & Intro" },
-  "rp.skills":       { en: "13 skills",       tr: "13 yetenek",         de: "13 Fähigkeiten" },
-  "rp.research":     { en: "5 publications",  tr: "5 yayın",           de: "5 Publikationen" },
-  "rp.projects":     { en: "3 folders",       tr: "3 klasör",          de: "3 Ordner" },
-  "rp.experience":   { en: "3 roles · timeline", tr: "3 rol · zaman çizelgesi", de: "3 Rollen · Verlauf" },
+  "rp.skills": { en: "14 skills", tr: "14 yetenek", de: "14 Fähigkeiten" },
+  "rp.research": { en: "8 projects", tr: "8 proje", de: "8 Projekte" },
+  "rp.projects": { en: "5 folders", tr: "5 klasör", de: "5 Ordner" },
+  "rp.experience": { en: "5 roles · timeline", tr: "5 rol · zaman çizelgesi", de: "5 Rollen · Verlauf" },
   "rp.blog":         { en: "5 posts",         tr: "5 yazı",            de: "5 Beiträge" },
   "rp.mail":         { en: "1 unread",        tr: "1 okunmamış",       de: "1 ungelesen" },
   "rp.photos":       { en: "2 photos",        tr: "2 fotoğraf",        de: "2 Fotos" },
   "rp.settings":     { en: "System",           tr: "Sistem",            de: "System" },
   "rp.phone":        { en: "Recent calls",     tr: "Son aramalar",      de: "Letzte Anrufe" },
-  "rp.browser":      { en: "yagiz.dev",        tr: "yagiz.dev",         de: "yagiz.dev" },
+  "rp.browser": { en: "onurtellioglu.com", tr: "onurtellioglu.com", de: "onurtellioglu.com" },
   "rp.camera":       { en: "1 capture",        tr: "1 çekim",           de: "1 Aufnahme" },
 
   /* Notification mock items */
-  "noti.t1":         { en: "New mention",     tr: "Yeni etiketleme",   de: "Neue Erwähnung" },
-  "noti.s1":         { en: "@yagiz cited in 3 recent threads",
-                       tr: "@yagiz son 3 konuşmada anıldı",
-                       de: "@yagiz in 3 Threads erwähnt" },
-  "noti.t2":         { en: "Simulation finished",
-                       tr: "Simülasyon bitti",
-                       de: "Simulation beendet" },
-  "noti.s2":         { en: "α-synuclein REMD replica 2/2 — ensemble ready",
-                       tr: "α-sinüklein REMD replika 2/2 — ensemble hazır",
-                       de: "α-Synuclein-REMD-Replika 2/2 — Ensemble bereit" },
-  "noti.t3":         { en: "Paper accepted",
-                       tr: "Makale kabul edildi",
-                       de: "Paper angenommen" },
-  "noti.s3":         { en: "J. Biomol. Struct. Dyn. — congratulations!",
-                       tr: "J. Biomol. Struct. Dyn. — tebrikler!",
-                       de: "J. Biomol. Struct. Dyn. — Glückwunsch!" },
+  "noti.t1": { en: "Reminder", tr: "Hatırlatma", de: "Erinnerung" },
+  "noti.s1": { en: "Return the FT232H cable to the bench", tr: "FT232H kablosunu masaya geri koy", de: "FT232H-Kabel zurück an den Messplatz" },
+  "noti.t2": { en: "Capture finished", tr: "Yakalama bitti", de: "Erfassung beendet" },
+  "noti.s2": { en: "I-MON sweep 2/2: spectra saved", tr: "I-MON taraması 2/2: spektrumlar kaydedildi", de: "I-MON-Sweep 2/2: Spektren gespeichert" },
+  "noti.t3": { en: "Build passed", tr: "Derleme geçti", de: "Build erfolgreich" },
+  "noti.s3": { en: "PomeloHook main: all checks green", tr: "PomeloHook main: tüm kontroller yeşil", de: "PomeloHook main: alle Checks grün" },
 };
 Object.assign(STRINGS, MOBILE_STRINGS);
 
@@ -382,7 +368,7 @@ const APP_COLORS = {
 const HOME_APPS = [
   "me", "skills", "research", "projects",
   "experience", "blog", "photos", "settings",
-  "linkedin", "github", "cv", "camera",
+  "github", "cv", "camera",
 ];
 const DOCK_APPS = ["phone", "browser", "mail", "me"];
 
@@ -414,7 +400,7 @@ const AppIcon = ({ appId, size = 56 }) => {
   /* Folder = mini grid of webp icons */
   if (meta.isFolder) {
     const tiles = appId === "research"
-      ? ["microscope-icon.webp", "file-icon.webp", "dna-icon.webp", "molecule-icon.webp"]
+      ? ["file-icon.webp", "terminal-icon.webp", "robot-head-with-brain-motif-icon.webp", "python-icon.webp"]
       : ["folder-icon.webp", "globe-with-code-brackets.webp", "react-icon.webp", "python-icon.webp"];
     return (
       <div className="a-app-ico" style={{ background: "rgba(255,255,255,0.08)" }}>
@@ -444,7 +430,7 @@ const AppIcon = ({ appId, size = 56 }) => {
       <div className="a-app-ico" style={{
         background: `linear-gradient(135deg, ${color}, ${shade(color, -20)})`,
       }}>
-        <img src="portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif"
+        <img src="portfolios-assets/onur-portrait-placeholder.svg"
           alt="" draggable={false}
           style={{
             position: "absolute", left: "8%", top: "12%",
@@ -643,12 +629,12 @@ const RecentPreview = ({ appId }) => {
     return (
       <div style={{ display: "flex", alignItems: "center", gap: 16, padding: 14 }}>
         <div style={{ width: 80, height: 80, background: "#2a2f3a", overflow: "hidden", border: "1px solid rgba(255,255,255,0.12)" }}>
-          <img src="portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif"
+          <img src="portfolios-assets/onur-portrait-placeholder.svg"
             style={{ width: "100%", height: "100%", objectFit: "cover", imageRendering: "pixelated" }} alt=""/>
         </div>
         <div style={{ flex: 1, color: "#cdd5dc" }}>
-          <div style={{ fontSize: 14, fontWeight: 500 }}>Ibrahim Yağız</div>
-          <div style={{ fontSize: 12, color: "var(--holo-text-dim)" }}>CS · Biophysics</div>
+          <div style={{ fontSize: 14, fontWeight: 500 }}>Onur Tellioglu</div>
+          <div style={{ fontSize: 12, color: "var(--holo-text-dim)" }}>AI · Instruments</div>
         </div>
       </div>
     );
@@ -656,7 +642,7 @@ const RecentPreview = ({ appId }) => {
   if (appId === "photos") {
     return (
       <div style={{ padding: 10, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 4, height: "100%" }}>
-        <img src="portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif"
+        <img src="portfolios-assets/onur-portrait-placeholder.svg"
           style={{ width: "100%", height: "100%", objectFit: "cover", imageRendering: "pixelated" }} alt=""/>
         <img src="portfolios-assets/desktop-background.avif"
           style={{ width: "100%", height: "100%", objectFit: "cover" }} alt=""/>
@@ -866,7 +852,7 @@ const AndroidOSInner = () => {
 
   const openApp = (id) => {
     if (id === "cv") {
-      alert(t("alert.cv"));
+      window.open("portfolios-assets/onur_tellioglu_cv.pdf", "_blank");
       return;
     }
     // Push current app onto history so Back can return to it
