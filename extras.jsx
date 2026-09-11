@@ -584,7 +584,7 @@ const BlogWindow = ({ z, onFocus, onClose, onMin }) => {
               display: "grid", placeItems: "center",
               fontFamily:'"Times New Roman", serif', fontWeight: 700, fontSize: 16,
               boxShadow: "var(--bevel-thin-out)",
-            }}>Y</div>
+            }}>O</div>
             <div style={{ fontSize: 11.5 }}>
               <div style={{ fontWeight: 700 }}>Onur Tellioglu</div>
               <div style={{
