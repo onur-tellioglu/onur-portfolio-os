@@ -10,7 +10,7 @@ const MeApp = ({ onOpen }) => {
     <>
       <ActionBar
         iconAppId="me"
-        title="Ibrahim Yağız Akbayrak"
+        title="Onur Tellioglu"
         sub={t("hero.tagline")}
         actions={[
           { icon: <Glyph.Search size={20}/>, label: t("a.search") },
@@ -32,7 +32,7 @@ const MeApp = ({ onOpen }) => {
             border: "1px solid rgba(51,181,229,0.3)",
             boxShadow: "0 0 18px rgba(51,181,229,0.2)",
           }}>
-            <img src="portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif"
+            <img src="portfolios-assets/onur-portrait-placeholder.svg"
               alt="" draggable={false}
               style={{ width:"100%", height:"100%", objectFit:"cover", imageRendering:"pixelated" }}/>
           </div>
@@ -41,7 +41,7 @@ const MeApp = ({ onOpen }) => {
               {t("hero.greeting")}
             </div>
             <div style={{ fontSize: 20, fontWeight: 500, lineHeight: 1.15 }}>
-              Ibrahim Yağız<br/>Akbayrak
+              Onur<br/>Tellioglu
             </div>
             <div style={{
               display: "inline-block", marginTop: 8,
@@ -63,9 +63,9 @@ const MeApp = ({ onOpen }) => {
         {/* Stats row */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 1, background: "var(--holo-divider)", margin: "14px 0" }}>
           {[
-            ["5", t("stat.pubs")],
-            ["CS", t("stat.cs")],
-            ["R&W", t("stat.rw")],
+            ["8", t("stat.pubs")],
+            ["AI", t("stat.cs")],
+            ["TR·EN·DE", t("stat.rw")],
           ].map(([big, lbl], i) => (
             <div key={i} style={{ background: "#0e1014", padding: "16px 10px", textAlign: "center" }}>
               <div style={{ fontSize: 28, fontWeight: 300, color: "var(--holo-cyan)", lineHeight: 1 }}>{big}</div>
@@ -79,8 +79,8 @@ const MeApp = ({ onOpen }) => {
         <div className="a-list">
           {[
             { ico: () => <IconComputer size={32}/>, k: "about.cs",  appId: "skills" },
-            { ico: () => <IconMolecule size={32}/>, k: "about.cb",  appId: "research" },
-            { ico: () => <IconResearch size={32}/>, k: "about.rd",  appId: "research" },
+            { ico: () => <IconChip size={32}/>,     k: "about.cb",  appId: "research" },
+            { ico: () => <IconRobot size={32}/>,    k: "about.rd",  appId: "experience" },
             { ico: () => <IconGlobe size={32}/>,    k: "about.web", appId: "experience" },
           ].map((d, i) => (
             <div key={i} className="a-list-row" onClick={() => onOpen && onOpen(d.appId)}>
@@ -183,60 +183,52 @@ const MeApp = ({ onOpen }) => {
         {/* ===== Contact ===== */}
         <div className="a-sectionhead">{t("sec.contact.title")}</div>
         <div className="a-list">
-          <a className="a-list-row" href="mailto:ibrahimyagizakbayrak@gmail.com" style={lrLink}>
+          <a className="a-list-row" href="mailto:onur@onurtellioglu.com" style={lrLink}>
             <div className="lr-ico"><IconMail size={32}/></div>
             <div>
               <div className="lr-title">{t("contact.email")}</div>
-              <div className="lr-sub">ibrahimyagizakbayrak@gmail.com</div>
+              <div className="lr-sub">onur@onurtellioglu.com</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
           </a>
-          <a className="a-list-row" href="https://www.linkedin.com/in/iyagiz-akbayrak/" target="_blank" rel="noreferrer" style={lrLink}>
-            <div className="lr-ico"><IconLinkedIn size={32}/></div>
-            <div>
-              <div className="lr-title">{t("contact.linkedin")}</div>
-              <div className="lr-sub">linkedin.com/in/iyagiz-akbayrak</div>
-            </div>
-            <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
-          </a>
-          <a className="a-list-row" href="https://github.com/akbayrakyagiz" target="_blank" rel="noreferrer" style={lrLink}>
+          <a className="a-list-row" href="https://github.com/onur-tellioglu" target="_blank" rel="noreferrer" style={lrLink}>
             <div className="lr-ico"><IconGitHub size={32}/></div>
             <div>
               <div className="lr-title">{t("contact.github")}</div>
-              <div className="lr-sub">github.com/akbayrakyagiz</div>
+              <div className="lr-sub">github.com/onur-tellioglu</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
           </a>
-          <a className="a-list-row" href="https://github.com/Pomelo-Studios" target="_blank" rel="noreferrer" style={lrLink}>
-            <div className="lr-ico"><IconBriefcase size={32}/></div>
+          <a className="a-list-row" href="https://onurtellioglu.com" target="_blank" rel="noreferrer" style={lrLink}>
+            <div className="lr-ico"><IconGlobe size={32}/></div>
+            <div>
+              <div className="lr-title">{t("contact.site")}</div>
+              <div className="lr-sub">onurtellioglu.com</div>
+            </div>
+            <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
+          </a>
+          <a className="a-list-row" href="https://fauvault.space" target="_blank" rel="noreferrer" style={lrLink}>
+            <div className="lr-ico"><IconBook size={32}/></div>
             <div>
               <div className="lr-title">{t("contact.studio")}</div>
-              <div className="lr-sub">github.com/Pomelo-Studios</div>
+              <div className="lr-sub">fauvault.space</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
           </a>
-          <a className="a-list-row" href="https://orcid.org/0000-0001-9611-0965" target="_blank" rel="noreferrer" style={lrLink}>
-            <div className="lr-ico"><IconDiploma size={32}/></div>
-            <div>
-              <div className="lr-title">{t("contact.orcid")}</div>
-              <div className="lr-sub">0000-0001-9611-0965</div>
-            </div>
-            <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
-          </a>
-          <div className="a-list-row" onClick={() => alert(t("alert.cv"))}>
+          <a className="a-list-row" href="portfolios-assets/onur_tellioglu_cv.pdf" target="_blank" rel="noreferrer" style={lrLink}>
             <div className="lr-ico"><IconFloppy size={32}/></div>
             <div>
               <div className="lr-title">{t("contact.cv")}</div>
-              <div className="lr-sub">yagiz_cv.pdf</div>
+              <div className="lr-sub">onur_tellioglu_cv.pdf</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
-          </div>
+          </a>
         </div>
 
         <div style={{ height: 90 }}/>
       </div>
       <button className="a-fab" onClick={() => {
-        location.href = "mailto:ibrahimyagizakbayrak@gmail.com";
+        location.href = "mailto:onur@onurtellioglu.com";
       }} title={t("me.contactAction")}>
         <Glyph.Mail size={22}/>
       </button>
@@ -261,10 +253,10 @@ const SectionWithViewAll = ({ title, sub, onView }) => {
 
 /* ---------- SKILLS ---------- */
 const SKILL_GROUPS = [
-  { id: "lang",    titleK: "sk.lang",    items: ["Python", "MATLAB", "R", "Java", "JavaScript", "PHP"] },
-  { id: "web",     titleK: "sk.web",     items: ["HTML5", "CSS3", "WordPress"] },
-  { id: "tools",   titleK: "sk.tools",   items: ["Git"] },
-  { id: "science", titleK: "sk.science", items: ["GROMACS", "NWChem", "VMD", "AI/ML"] },
+  { id: "lang",    titleK: "sk.lang",    items: ["Python", "TypeScript", "Go", "Swift", "C++", "Bash"] },
+  { id: "web",     titleK: "sk.web",     items: ["React", "Next.js", "Node.js"] },
+  { id: "tools",   titleK: "sk.tools",   items: ["Docker", "Git", "PostgreSQL", "SQL"] },
+  { id: "science", titleK: "sk.science", items: ["AI/LLM"] },
 ];
 
 const SkillsApp = () => {
@@ -334,12 +326,14 @@ const ResearchApp = () => {
             {open.abstract}
           </div>
           <div style={{ marginTop: 18, display: "flex", gap: 10 }}>
-            <button className="a-btn solid"><Glyph.Document size={16}/> {t("a.open")}</button>
+            <button className="a-btn solid" onClick={() => open.url && window.open(open.url, "_blank", "noreferrer")}><Glyph.Document size={16}/> {t("a.open")}</button>
             <button className="a-btn"><Glyph.Send size={16}/> {t("a.share")}</button>
           </div>
-          <div style={{ marginTop: 22, fontSize: 11.5, color: "var(--holo-text-dim)" }}>
-            DOI · <span style={{ fontFamily: '"Roboto Mono", monospace', color: "var(--holo-cyan)" }}>{open.doi}</span>
-          </div>
+          {open.doi && (
+            <div style={{ marginTop: 22, fontSize: 11.5, color: "var(--holo-text-dim)" }}>
+              DOI · <span style={{ fontFamily: '"Roboto Mono", monospace', color: "var(--holo-cyan)" }}>{open.doi}</span>
+            </div>
+          )}
         </div>
       </>
     );
@@ -413,7 +407,7 @@ const ProjectsApp = () => {
           {openFile.links && openFile.links.length > 0 && (
             <div style={{ marginTop: 18, display: "flex", gap: 8, flexWrap: "wrap" }}>
               {openFile.links.map((l, i) => (
-                <button key={i} className="a-btn" onClick={() => alert(t("proj.placeholder"))}>{l.label}</button>
+                <button key={i} className="a-btn" onClick={() => window.open(l.url, "_blank", "noreferrer")}>{l.label}</button>
               ))}
             </div>
           )}
@@ -631,14 +625,14 @@ const MailApp = () => {
           title={t("contact.newMsg")}
           actions={[
             { icon: <Glyph.Send size={20}/>, label: t("a.send"),
-              onClick: () => { alert(t("alert.cv")); setComposing(false); } },
+              onClick: () => { location.href = "mailto:onur@onurtellioglu.com"; setComposing(false); } },
             { icon: <Glyph.More size={20}/>, label: t("a.more") },
           ]}
         />
         <div className="a-body">
           <div style={{ padding: "10px 16px", borderBottom: "1px solid var(--holo-divider)" }}>
             <div style={{ fontSize: 11, color: "var(--holo-text-dim)", marginBottom: 4 }}>{t("contact.to")}</div>
-            <input defaultValue="ibrahimyagizakbayrak@gmail.com" style={inpStyle}/>
+            <input defaultValue="onur@onurtellioglu.com" style={inpStyle}/>
           </div>
           <div style={{ padding: "10px 16px", borderBottom: "1px solid var(--holo-divider)" }}>
             <div style={{ fontSize: 11, color: "var(--holo-text-dim)", marginBottom: 4 }}>{t("contact.subject")}</div>
@@ -666,27 +660,27 @@ const MailApp = () => {
       <div className="a-body">
         <div className="a-sectionhead">{t("mail.replyHere")}</div>
         <div className="a-list">
-          <a className="a-list-row" href="mailto:ibrahimyagizakbayrak@gmail.com" style={{ textDecoration: "none", color: "inherit" }}>
+          <a className="a-list-row" href="mailto:onur@onurtellioglu.com" style={{ textDecoration: "none", color: "inherit" }}>
             <div className="lr-ico"><IconMail size={36}/></div>
             <div>
               <div className="lr-title">{t("contact.email")}</div>
-              <div className="lr-sub">ibrahimyagizakbayrak@gmail.com</div>
+              <div className="lr-sub">onur@onurtellioglu.com</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
           </a>
-          <a className="a-list-row" href="https://www.linkedin.com/in/iyagiz-akbayrak/" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
-            <div className="lr-ico"><IconLinkedIn size={36}/></div>
-            <div>
-              <div className="lr-title">{t("contact.linkedin")}</div>
-              <div className="lr-sub">linkedin.com/in/iyagiz-akbayrak</div>
-            </div>
-            <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
-          </a>
-          <a className="a-list-row" href="https://github.com/akbayrakyagiz" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+          <a className="a-list-row" href="https://github.com/onur-tellioglu" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
             <div className="lr-ico"><IconGitHub size={36}/></div>
             <div>
               <div className="lr-title">{t("contact.github")}</div>
-              <div className="lr-sub">github.com/akbayrakyagiz</div>
+              <div className="lr-sub">github.com/onur-tellioglu</div>
+            </div>
+            <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
+          </a>
+          <a className="a-list-row" href="https://onurtellioglu.com" target="_blank" rel="noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+            <div className="lr-ico"><IconGlobe size={36}/></div>
+            <div>
+              <div className="lr-title">{t("contact.site")}</div>
+              <div className="lr-sub">onurtellioglu.com</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
           </a>
@@ -711,7 +705,7 @@ const MailApp = () => {
             <div style={{ fontSize: 13, lineHeight: 1.55, color: "#cfd6dd" }}
               dangerouslySetInnerHTML={{__html: t("contact.body")}}/>
             <div style={{ marginTop: 14, color: "var(--holo-cyan)", fontSize: 12, letterSpacing: "0.04em", fontFamily: '"Roboto Condensed", sans-serif' }}>
-              — Ibrahim Yağız
+              Onur
             </div>
           </div>
         </div>
@@ -735,7 +729,7 @@ const inpStyle = {
 const PhotosApp = ({ onPhotoOpen }) => {
   const t = useT();
   const items = [
-    { src: "portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif", label: t("ph.portrait") },
+    { src: "portfolios-assets/onur-portrait-placeholder.svg", label: t("ph.portrait") },
     { src: "portfolios-assets/desktop-background.avif",                       label: t("ph.wallpaper") },
   ];
   return (
@@ -778,8 +772,8 @@ const PhotosApp = ({ onPhotoOpen }) => {
 const SocialApp = ({ kind }) => {
   const t = useT();
   const meta = APP_META[kind];
-  const url = kind === "linkedin" ? "https://www.linkedin.com/in/iyagiz-akbayrak/" : "https://github.com/akbayrakyagiz";
-  const handle = kind === "linkedin" ? "linkedin.com/in/iyagiz-akbayrak" : "github.com/akbayrakyagiz";
+  const url = "https://github.com/onur-tellioglu";
+  const handle = "github.com/onur-tellioglu";
   return (
     <>
       <ActionBar
@@ -793,12 +787,12 @@ const SocialApp = ({ kind }) => {
           <AppIcon appId={kind} size={92}/>
         </div>
         <div style={{ fontSize: 20, fontWeight: 500, marginTop: 18 }}>
-          Ibrahim Yağız Akbayrak
+          Onur Tellioglu
         </div>
         <div style={{ fontSize: 13, color: "var(--holo-text-dim)", marginTop: 6 }}>
           {kind === "linkedin"
             ? "Computer Science · Researcher · Web"
-            : "@akbayrakyagiz"}
+            : "@onur-tellioglu"}
         </div>
         <div style={{ marginTop: 26 }}>
           <a className="a-btn solid" href={url} target="_blank" rel="noreferrer"
@@ -815,7 +809,7 @@ const SocialApp = ({ kind }) => {
         }}>
           {kind === "linkedin"
             ? "Connecting on LinkedIn is a great way to reach out about collaborations, internships, or interesting research."
-            : "Source code for portfoliOS, simulation pipelines, and a few side projects live here."}
+            : "Source for ctscan, PomeloHook and a few side projects lives here."}
         </div>
       </div>
     </>
@@ -960,8 +954,8 @@ const KEY_LETTERS = {
   "6": "MNO", "7": "PQRS", "8": "TUV", "9": "WXYZ",
 };
 const RECENT_CALLS = [
-  { name: "LinkedIn",  num: "in/iyagiz-akbayrak", kind: "out", when: "Tue" },
-  { name: "GitHub",    num: "@akbayrakyagiz",     kind: "in",  when: "Mon" },
+  { name: "FAU LHFT",  num: "Erlangen",           kind: "out", when: "Tue" },
+  { name: "GitHub",    num: "@onur-tellioglu",    kind: "in",  when: "Mon" },
   { name: "Recruiter", num: "+90 5•• ••• ••••",   kind: "miss",when: "Sun" },
 ];
 
@@ -1347,7 +1341,7 @@ const BrowserApp = () => {
           borderBottom: "2px solid var(--holo-cyan)",
         }}>
           <div style={{ fontFamily: '"Roboto", sans-serif', fontSize: 24, fontWeight: 500, marginBottom: 4 }}>
-            Ibrahim Yağız Akbayrak
+            Onur Tellioglu
           </div>
           <div style={{ fontSize: 13, color: "var(--holo-cyan)" }}>{t("hero.tagline")}</div>
         </div>
@@ -1422,11 +1416,11 @@ const CameraApp = ({ onPhotoOpen }) => {
           <div style={{
             width: 44, height: 44, border: "1px solid rgba(255,255,255,0.3)", borderRadius: 4,
             overflow: "hidden", cursor: "pointer",
-          }} onClick={() => onPhotoOpen("portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif")}>
-            <img src="portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif"
+          }} onClick={() => onPhotoOpen("portfolios-assets/onur-portrait-placeholder.svg")}>
+            <img src="portfolios-assets/onur-portrait-placeholder.svg"
               style={{ width: "100%", height: "100%", objectFit: "cover", imageRendering: "pixelated" }} alt=""/>
           </div>
-          <button onClick={() => onPhotoOpen("portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif")}
+          <button onClick={() => onPhotoOpen("portfolios-assets/onur-portrait-placeholder.svg")}
             style={{
               width: 64, height: 64, borderRadius: "50%",
               background: "#fff", border: "4px solid rgba(255,255,255,0.4)",

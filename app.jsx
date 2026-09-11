@@ -430,7 +430,7 @@ const StartMenu = ({ open, onClose, onNav, onCloseAll, onOpenA11y, onOpenTermina
             </div>
           ))}
           <div className="sm-divider"/>
-          <div className="sm-item" onClick={() => { alert(t("alert.cv")); onClose(); }}>
+          <div className="sm-item" onClick={() => { window.open("portfolios-assets/onur_tellioglu_cv.pdf", "_blank"); onClose(); }}>
             <span className="smico" style={{ display:"grid", placeItems:"center" }}><IconFloppy size={18}/></span>
             {t("start.cv")}
           </div>
@@ -734,7 +734,7 @@ const Desktop = () => {
         <Shortcut sel={selected==="term"}  onSelect={() => setSelected("term")}   onOpen={() => openWin("terminal")}     icon={<IconTerminal size={44}/>} label={t("sc.term")}/>
         <Shortcut sel={selected==="notes"} onSelect={() => setSelected("notes")}  onOpen={() => openWin("notes")}        icon={<IconNote size={44}/>}     label={t("sc.notes")}/>
         <Shortcut sel={selected==="bin"}   onSelect={() => setSelected("bin")}    onOpen={() => alert(t("alert.binEmpty"))} icon={<IconTrash size={44}/>}    label={t("sc.bin")}/>
-        <Shortcut sel={selected==="cv"}    onSelect={() => setSelected("cv")}     onOpen={() => alert(t("alert.cv"))}    icon={<IconFloppy size={44}/>}   label={t("sc.cv")}/>
+        <Shortcut sel={selected==="cv"}    onSelect={() => setSelected("cv")}     onOpen={() => window.open("portfolios-assets/onur_tellioglu_cv.pdf", "_blank")}    icon={<IconFloppy size={44}/>}   label={t("sc.cv")}/>
         <Shortcut sel={selected==="mail"}  onSelect={() => setSelected("mail")}   onOpen={() => navTo("contact")}        icon={<IconMail size={44}/>}     label={t("sc.contact")}/>
       </div>
 

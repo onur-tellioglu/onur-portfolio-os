@@ -7,173 +7,196 @@
 const PROJECT_FOLDERS = {
   "C:\\projects\\": {
     folders: [
-      { name: "humanai_dynamics",  icon: "folder" },
-      { name: "pomelo_studios",    icon: "folder" },
-      { name: "molecular_sims",    icon: "folder" },
-      { name: "web_dev",           icon: "folder" },
+      { name: "fau_photonics_lab", icon: "folder" },
+      { name: "llm_agents",        icon: "folder" },
+      { name: "apps_and_infra",    icon: "folder" },
+      { name: "embedded",          icon: "folder" },
+      { name: "web",               icon: "folder" },
     ],
     files: [
       { name: "README.txt", type: "txt" },
     ],
   },
-  "C:\\projects\\humanai_dynamics\\": {
+  "C:\\projects\\fau_photonics_lab\\": {
     files: [
       {
-        name: "biomatics_msa.prj", type: "prj",
-        title: "BioMatics 1.0 — Wasserstein MSA",
-        stack: "C++ · optimal transport",
-        year: "2025",
+        name: "phoenix1400_python.prj", type: "prj",
+        title: "phoenix1400-python: Tunable Laser Control",
+        stack: "Python · ctypes · 32-bit DLL",
+        year: "2026",
         body:
-`A Wasserstein-distance approach for next-generation Multiple
-Sequence Alignment, developed alongside Prof. Orkide Coşkuner Weber.
-Fork of ocoskuner/BioMatics under HumanAI Dynamics.
+`Python control for the Luna/Polytec Phoenix 1400 tunable laser
+at FAU LHFT. The vendor ships a 32-bit Phoenix.dll with examples
+for C++, LabVIEW and MATLAB, and no Python binding.
 
-· Optimal-transport metric for sequence comparison
-· Designed for IDPs and highly divergent families
-· Core building block of the BioMatics AI/MD engine`,
-        links: [
-          { label: "View on GitHub", url: "https://github.com/akbayrakyagiz/BioMatics" },
-        ],
-      },
-      {
-        name: "ipocket_rl_agent.prj", type: "prj",
-        title: "iPocket — RL Agent for Cryptic Pocket Search",
-        stack: "Python · PyTorch · RL · GROMACS",
-        year: "2025 — Present",
-        body:
-`Multi-agent reinforcement learning over protein trajectories
-to surface druggable transient and cryptic pockets that static
-structure tools miss.
-
-· Pocket coordinates + druggability scoring
-· Used for fragment → hit/lead → ADMET pre-filter workflow
-· Designed for IDPs and flexible targets`,
+· Loads the DLL through ctypes
+· A class that validates values and tracks laser state
+· Four rounds, each signed off on the real laser`,
         links: [],
       },
       {
-        name: "multimodal_biomarker.prj", type: "prj",
-        title: "Multimodal Biomarker Layer",
-        stack: "Python · digital pathology · omics",
-        year: "2025 — Present",
+        name: "imon_fbg.prj", type: "prj",
+        title: "imon-fbg: FBG Interrogator Software",
+        stack: "Python · FTDI FT232H · Ibsen I-MON 256",
+        year: "2026",
         body:
-`Connects molecular-dynamic signals to clinical decision support
-by combining digital pathology, imaging and omics with mechanistic
-features from the AI/MD core.
+`Custom acquisition and analysis software for an Ibsen I-MON 256
+USB fiber Bragg grating interrogator, replacing the vendor
+evaluation tool.
 
-· Companion-diagnostic ready outputs
-· SaaS + CRO model for biotech, pharma and diagnostics
-· Initial target customers: biotech, pharma, medical imaging`,
+· Raw reflection spectra at up to ~6000 frames/s
+· Peak tracking and calibration
+· Live wavelength-versus-time display`,
+        links: [],
+      },
+      {
+        name: "ad9910_pico.prj", type: "prj",
+        title: "ad9910-pico: DDS over SPI",
+        stack: "Raspberry Pi Pico · SPI · AD9910/PCBZ",
+        year: "2026",
+        body:
+`Drives an AD9910 evaluation board from a Raspberry Pi Pico
+instead of the Analog Devices USB stack and PC software.
+
+· Registers read back exact
+· IO_UPDATE latches writes
+· DAC tone tracks the tuning word to within 1 ppm`,
+        links: [],
+      },
+      {
+        name: "gpib_hfdev160.prj", type: "prj",
+        title: "gpib-hfdev160: GPIB on Ubuntu 24.04",
+        stack: "linux-gpib · NI GPIB-USB-HS · Bash",
+        year: "2026",
+        body:
+`One-shot installer that rebuilds the lab PC's GPIB stack.
+Ubuntu ships no GPIB driver at all, so linux-gpib is built
+from source and pinned.
+
+· Compat bridge for the kernel 6.16+ timer API
+· Update freeze so kernel upgrades cannot break it
+· Bus scan without root, survives replug`,
+        links: [],
+      },
+      {
+        name: "instrument_lan_bench.prj", type: "prj",
+        title: "Instrument LAN Bench Mounts",
+        stack: "OpenSCAD · Prusa MK4 · PLA/PETG",
+        year: "2026",
+        body:
+`3D-printed mounts that put the lab's closed instrument network
+onto the bench: switch brackets for a 40 x 80 T-slot profile
+and a replacement end cap for a power strip.
+
+· Modelled in OpenSCAD, PLA fit test, PETG final
+· Every load path checked before printing`,
         links: [],
       },
     ],
   },
-  "C:\\projects\\pomelo_studios\\": {
+  "C:\\projects\\llm_agents\\": {
+    files: [
+      {
+        name: "assistbase_whatsapp.prj", type: "prj",
+        title: "Assistbase: Patient Journey over WhatsApp",
+        stack: "Node.js · OpenAI API · Supabase",
+        year: "2025 – 2026",
+        body:
+`A fully custom system running the complete patient journey
+over WhatsApp for a surgical clinic, with no low-code tools
+or templates.
+
+· Multilingual intake, photos, booking, reminders, follow-up
+· Handles 90% of communication end to end
+· Structured patient memory persisted in Supabase`,
+        links: [],
+      },
+    ],
+  },
+  "C:\\projects\\apps_and_infra\\": {
     files: [
       {
         name: "pomelohook.prj", type: "prj",
-        title: "pomelohook",
-        stack: "Pomelo Studios",
-        year: "2024 — Present",
-        body:
-`A Pomelo Studios project — hook-style developer utility built
-under the studio umbrella alongside the live markdown editor.
-
-Details coming soon — see the Pomelo Studios GitHub org for the
-latest source and releases.`,
-        links: [
-          { label: "Pomelo Studios on GitHub", url: "https://github.com/Pomelo-Studios" },
-        ],
-      },
-      {
-        name: "live_markdown_editor.prj", type: "prj",
-        title: "Live Markdown Editor",
-        stack: "Pomelo Studios · web",
-        year: "2024 — Present",
-        body:
-`A live, in-browser markdown editor by Pomelo Studios with
-real-time preview.
-
-Details coming soon — see the Pomelo Studios GitHub org for the
-latest source and releases.`,
-        links: [
-          { label: "Pomelo Studios on GitHub", url: "https://github.com/Pomelo-Studios" },
-        ],
-      },
-    ],
-  },
-  "C:\\projects\\molecular_sims\\": {
-    files: [
-      {
-        name: "alpha_synuclein_ai_ensembles.prj", type: "prj",
-        title: "AI Ensemble Pipelines on α-Synuclein",
-        stack: "Python · MDAnalysis · AI ensembles",
+        title: "PomeloHook: Self-Hosted Webhook Relay",
+        stack: "Go · SQLite · React · WebSocket",
         year: "2026",
         body:
-`Head-to-head comparison of AI ensemble pipelines on the
-intrinsically disordered protein α-synuclein. How do different
-methods represent disorder, ensemble heterogeneity, and
-biologically meaningful conformational states?
+`Think ngrok, but self-hosted, team-aware and built around
+persistent event history.
 
-· Published in J. Biomol. Struct. Dyn. (2026)
-· DOI: 10.1080/07391102.2026.2630328`,
+· Events land in SQLite before forwarding
+· Replay from CLI or dashboard
+· Single Go binary, dashboard embedded`,
         links: [
-          { label: "Open paper (DOI)", url: "https://doi.org/10.1080/07391102.2026.2630328" },
+          { label: "hook.pomelostudios.net", url: "https://hook.pomelostudios.net" },
         ],
       },
       {
-        name: "sars_cov2_mpro.prj", type: "prj",
-        title: "SARS-CoV-2 Main Protease — Structural Insights",
-        stack: "REMD · GROMACS · NWChem",
-        year: "2022",
+        name: "ctscan_mend.prj", type: "prj",
+        title: "ctscan & mend: macOS System Health",
+        stack: "Bash · Homebrew · SwiftUI",
+        year: "2026",
         body:
-`Computational analysis of the SARS-CoV-2 main protease (Mpro):
-disorder propensity, dynamic structural properties and druggable
-conformational states for antiviral discovery.
+`A 14-module CLI published as a Homebrew formula, pure Bash
+and dependency-free. mend is the SwiftUI app on top of it.
 
-· Published in Curr. Res. Struct. Biol., 2022; 4:349–355
-· DOI: 10.1016/j.crstbi.2022.11.001`,
+· Battery, SSD wear, thermals, memory, Wi-Fi
+· FileVault, SIP and Gatekeeper checks
+· Menu bar app with a background scan timer`,
         links: [
-          { label: "Open paper (DOI)", url: "https://doi.org/10.1016/j.crstbi.2022.11.001" },
+          { label: "ctscan on GitHub Pages", url: "https://onur-tellioglu.github.io/ctscan/" },
         ],
       },
       {
-        name: "mers_cov_macro_domain.prj", type: "prj",
-        title: "MERS-CoV Macro Domain — REMD + Deep Learning",
-        stack: "REMD · GROMACS · Deep Learning",
-        year: "2020 — 2021",
+        name: "cull.prj", type: "prj",
+        title: "Cull: Swipe-to-Cull Photo Manager",
+        stack: "Swift · SwiftUI",
+        year: "2026",
         body:
-`Replica-exchange molecular dynamics of the MERS-CoV macro domain
-in aqueous solution, comparing parallel-tempering techniques and
-force-field parameters. A separate pre-print couples REMD with
-deep learning at the nano level.
+`Reviews a photo library one image at a time, learns what is
+blurry, and keeps, culls or undoes with a single gesture.
 
-· Proteins (2021) · DOI: 10.1002/prot.26150
-· Pre-print: 10.22541/au.159646074.43956314`,
-        links: [
-          { label: "Open paper (DOI)", url: "https://doi.org/10.1002/prot.26150" },
-        ],
-      },
-      {
-        name: "idp_neurodegenerative_review.prj", type: "prj",
-        title: "IDPs in Neurodegenerative Diseases — Review",
-        stack: "Review · IDPs · MD",
-        year: "2020",
-        body:
-`Review of the computational toolkit for intrinsically disordered
-proteins (IDPs) in neurodegenerative diseases — force fields,
-enhanced sampling, ensemble analysis — and the open challenges in
-modelling their disordered states.
-
-· Curr. Alzheimer Res. 17(9): 805–818
-· DOI: 10.2174/1567205017666201109094908`,
-        links: [
-          { label: "Open paper (DOI)", url: "https://doi.org/10.2174/1567205017666201109094908" },
-        ],
+· Submitted to App Store review`,
+        links: [],
       },
     ],
   },
-  "C:\\projects\\web_dev\\": {
+  "C:\\projects\\embedded\\": {
     files: [
+      {
+        name: "turbin_ecu.prj", type: "prj",
+        title: "turbin-ecu: Micro-Turbine Engine Controller",
+        stack: "C++ · PlatformIO · ESP32",
+        year: "2026",
+        body:
+`ESP32 engine control unit driven by a 9-state machine, from
+IDLE through IGNITION and RUNNING to COOLING.
+
+· Hall-effect RPM, MAX31855 thermocouple over SPI
+· Solenoid valves, brushless ESC and fuel pump on PWM
+· Desktop simulation via the PlatformIO native target`,
+        links: [],
+      },
+    ],
+  },
+  "C:\\projects\\web\\": {
+    files: [
+      {
+        name: "agite_storefront.prj", type: "prj",
+        title: "AGITÉ: Headless E-Commerce Storefront",
+        stack: "Next.js · Prisma · Postgres · MinIO",
+        year: "2026",
+        body:
+`Storefront and admin panel for a Turkish direct-to-consumer
+fashion brand, live in production and self-hosted on one VPS.
+
+· 3D Secure card payments through QNB Sanal POS
+· Refunds, back-in-stock emails, critical-error alerts
+· Product images on MinIO, email with Resend`,
+        links: [
+          { label: "agitebrand.com", url: "https://agitebrand.com" },
+        ],
+      },
       {
         name: "portfolio_os.prj", type: "prj",
         title: "portfoliOS (this site)",
@@ -181,29 +204,40 @@ modelling their disordered states.
         year: "2026",
         body:
 `A Windows-95-themed personal portfolio with a Holo-era Android
-companion for mobile and tablet. Draggable windows on desktop,
-icon grid + Holo action bars on mobile.
+companion for mobile. Built on portfoliOS by Ibrahim Yağız
+Akbayrak, used with his permission.
 
-· Pixel-flavored icon set
+· Pixel-art icon set
 · i18n in TR / EN / DE
 · Zero external UI dependencies`,
+        links: [],
+      },
+      {
+        name: "fauvault.prj", type: "prj",
+        title: "FAUVault.space: Study Platform",
+        stack: "Next.js · Vercel",
+        year: "2026",
+        body:
+`Study platform for FAU students. More than 60% of one
+semester's exam was directly covered by the content.`,
         links: [
-          { label: "View source on GitHub", url: "https://github.com/akbayrakyagiz" },
+          { label: "fauvault.space", url: "https://fauvault.space" },
         ],
       },
       {
-        name: "demirkan_med_sites.prj", type: "prj",
-        title: "Multilingual Medical Practice Websites",
-        stack: "WordPress · PHP · Elementor · SEO",
-        year: "2022 — 2024",
+        name: "side_sites.prj", type: "prj",
+        title: "Side Sites",
+        stack: "Next.js · MongoDB",
+        year: "2025",
         body:
-`Multilingual websites (TR / DE / EN) and IT infrastructure for
-Prof. Dr. Ferit Demirkan's practice in Nürnberg.
+`Small sites built for friends and fun.
 
-· On-page SEO (RankMath) and performance (WP Rocket)
-· Technical documentation and translation of medical content
-· 4+ years of IT management and support`,
-        links: [],
+· kampusdizi: TV series tracker
+· stan-quiz: fan quiz platform`,
+        links: [
+          { label: "kampusdizi.vercel.app", url: "https://kampusdizi.vercel.app/" },
+          { label: "stan-quiz.vercel.app", url: "https://stan-quiz.vercel.app/" },
+        ],
       },
     ],
   },
@@ -413,69 +447,71 @@ const ProjectViewer = ({ file, z, onFocus, onClose }) => {
 const BLOG_POSTS = [
   {
     id: "p5",
-    date: "2026-05-09",
-    author: "yagiz",
-    kind: "milestone",
-    title: "Co-founding HumanAI Dynamics",
-    tags: ["humanai", "startup", "tubitak-bigg"],
+    date: "2026-08-25",
+    author: "onur",
+    kind: "post",
+    title: "A Python binding for a laser that only ships a 32-bit DLL",
+    tags: ["lab", "python", "ctypes"],
     body:
-`Excited to announce that, with Prof. Orkide Coşkuner Weber and a
-small founding team, we're co-founding HumanAI Dynamics — a
-disorder-aware multi-agent AI platform for drug discovery and
-biomarker development. Currently in the TÜBİTAK 1512 BiGG
-entrepreneurship programme.`,
+`The Phoenix 1400 tunable laser comes with a 32-bit Phoenix.dll
+and examples for C++, LabVIEW and MATLAB, but nothing for Python.
+The binding I wrote loads the DLL through ctypes and puts a class
+in front of it that checks every value and knows what state the
+laser is in. It shipped in four rounds, each signed off on the
+real laser before it was merged.`,
   },
   {
     id: "p4",
-    date: "2026-04-22",
-    author: "yagiz",
-    kind: "milestone",
-    title: "α-synuclein paper out in J. Biomol. Struct. Dyn.",
-    tags: ["research", "publication", "idp"],
+    date: "2026-08-12",
+    author: "onur",
+    kind: "post",
+    title: "Driving an AD9910 from a Raspberry Pi Pico",
+    tags: ["lab", "rf", "embedded"],
     body:
-`Our head-to-head comparison of AI ensemble pipelines on
-α-synuclein is now out in the Journal of Biomolecular Structure
-and Dynamics. doi:10.1080/07391102.2026.2630328`,
+`The lab's AD9910 evaluation board normally talks to a PC through
+Analog Devices' USB interface. I replaced that with a Raspberry
+Pi Pico over SPI. Registers read back exactly what was written,
+and the DAC tone tracks the programmed tuning word to within
+1 ppm. Most of the work was jumpers and pinouts, not code.`,
   },
   {
     id: "p3",
-    date: "2026-03-12",
-    author: "yagiz",
-    kind: "note",
-    title: "Notes on disorder-aware AI pipelines",
-    tags: ["ai", "idp", "humanai"],
+    date: "2026-06-18",
+    author: "onur",
+    kind: "milestone",
+    title: "Joining the FAU photonics lab as a HiWi",
+    tags: ["lab", "fau", "hiwi"],
     body:
-`Some scratchpad thoughts before we lock the HumanAI Dynamics
-architecture: where physics ends and learned ensembles begin,
-why IDPs break naive ensemble metrics, and what "druggable" should
-mean for a transient pocket.`,
+`I started as a student research assistant at the Institute of
+Microwaves and Photonics, between instruments and software. The
+first weeks went into the bench itself and into making the lab
+PC's GPIB stack survive kernel upgrades on Ubuntu 24.04.`,
   },
   {
     id: "p2",
-    date: "2026-02-18",
-    author: "yagiz",
+    date: "2026-04-26",
+    author: "onur",
     kind: "note",
-    title: "Three things I learned debugging GROMACS",
-    tags: ["dev", "gromacs"],
+    title: "PomeloHook: store first, forward second",
+    tags: ["go", "infra", "sqlite"],
     body:
-`1. Read the .log before the .err.
-2. NaN forces almost always trace back to overlapping atoms after
-   solvation. Check minimization.
-3. Domain decomposition errors are a feature, not a bug — they save
-   you from a much worse silent failure later.`,
+`Every event lands in SQLite before it is forwarded. If the
+forward fails, the event is still there and can be replayed from
+the CLI or the dashboard. One Go binary, React dashboard embedded,
+pure-Go SQLite so the build needs no C toolchain.`,
   },
   {
     id: "p1",
-    date: "2025-12-04",
-    author: "yagiz",
-    kind: "post",
-    title: "From materials science to computer science",
+    date: "2025-10-01",
+    author: "onur",
+    kind: "milestone",
+    title: "From computer engineering to AI at FAU",
     tags: ["meta", "education"],
     body:
-`Closing one degree (B.Sc. Materials Science & Technologies at
-the Turkish-German University) and starting another (B.Sc. Computer
-Science at FAU Erlangen-Nürnberg). The plan: keep the simulations,
-add the systems.`,
+`After a year of computer engineering at Istanbul Arel University
+I transferred to FAU Erlangen-Nürnberg to study Artificial
+Intelligence. The plan: keep building real systems on the side
+while the degree fills in the theory underneath them.`,
   },
 ];
 
@@ -564,9 +600,9 @@ const BlogWindow = ({ z, onFocus, onClose, onMin }) => {
               display: "grid", placeItems: "center",
               fontFamily:'"Times New Roman", serif', fontWeight: 700, fontSize: 16,
               boxShadow: "var(--bevel-thin-out)",
-            }}>Y</div>
+            }}>O</div>
             <div style={{ fontSize: 11.5 }}>
-              <div style={{ fontWeight: 700 }}>İ. Yağız Akbayrak</div>
+              <div style={{ fontWeight: 700 }}>Onur Tellioglu</div>
               <div style={{
                 color: "var(--text-dim)", fontFamily:'"Courier New", monospace', fontSize: 10.5,
               }}>@{open.author} · {open.date}</div>
@@ -617,7 +653,7 @@ const BlogWindow = ({ z, onFocus, onClose, onMin }) => {
         flexShrink: 0,
       }}>
         <span>{BLOG_POSTS.length} {t("blog.entries")}</span>
-        <span>yagiz.dev/blog</span>
+        <span>onurtellioglu.com/blog</span>
       </div>
     </DraggableWindow>
   );
