@@ -489,7 +489,7 @@ const Contact = () => {
 
       {/* contact links */}
       <div className="field" style={{ padding: 8 }}>
-        <ContactRow icon={<IconMail size={20}/>}    label={t("contact.email")}    value="onur.tellioglu@fau.de" href="mailto:onur.tellioglu@fau.de"/>
+        <ContactRow icon={<IconMail size={20}/>}    label={t("contact.email")}    value="onur@onurtellioglu.com" href="mailto:onur@onurtellioglu.com"/>
         <ContactRow icon={<IconGitHub size={20}/>}   label={t("contact.github")}   value="github.com/onur-tellioglu" href="https://github.com/onur-tellioglu"/>
         <ContactRow icon={<IconGlobe size={20}/>}     label={t("contact.site")}     value="onurtellioglu.com" href="https://onurtellioglu.com"/>
         <ContactRow icon={<IconBook size={20}/>}      label={t("contact.studio")}   value="fauvault.space" href="https://fauvault.space"/>

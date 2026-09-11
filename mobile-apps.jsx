@@ -183,11 +183,11 @@ const MeApp = ({ onOpen }) => {
         {/* ===== Contact ===== */}
         <div className="a-sectionhead">{t("sec.contact.title")}</div>
         <div className="a-list">
-          <a className="a-list-row" href="mailto:onur.tellioglu@fau.de" style={lrLink}>
+          <a className="a-list-row" href="mailto:onur@onurtellioglu.com" style={lrLink}>
             <div className="lr-ico"><IconMail size={32}/></div>
             <div>
               <div className="lr-title">{t("contact.email")}</div>
-              <div className="lr-sub">onur.tellioglu@fau.de</div>
+              <div className="lr-sub">onur@onurtellioglu.com</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
           </a>
@@ -228,7 +228,7 @@ const MeApp = ({ onOpen }) => {
         <div style={{ height: 90 }}/>
       </div>
       <button className="a-fab" onClick={() => {
-        location.href = "mailto:onur.tellioglu@fau.de";
+        location.href = "mailto:onur@onurtellioglu.com";
       }} title={t("me.contactAction")}>
         <Glyph.Mail size={22}/>
       </button>
@@ -625,14 +625,14 @@ const MailApp = () => {
           title={t("contact.newMsg")}
           actions={[
             { icon: <Glyph.Send size={20}/>, label: t("a.send"),
-              onClick: () => { location.href = "mailto:onur.tellioglu@fau.de"; setComposing(false); } },
+              onClick: () => { location.href = "mailto:onur@onurtellioglu.com"; setComposing(false); } },
             { icon: <Glyph.More size={20}/>, label: t("a.more") },
           ]}
         />
         <div className="a-body">
           <div style={{ padding: "10px 16px", borderBottom: "1px solid var(--holo-divider)" }}>
             <div style={{ fontSize: 11, color: "var(--holo-text-dim)", marginBottom: 4 }}>{t("contact.to")}</div>
-            <input defaultValue="onur.tellioglu@fau.de" style={inpStyle}/>
+            <input defaultValue="onur@onurtellioglu.com" style={inpStyle}/>
           </div>
           <div style={{ padding: "10px 16px", borderBottom: "1px solid var(--holo-divider)" }}>
             <div style={{ fontSize: 11, color: "var(--holo-text-dim)", marginBottom: 4 }}>{t("contact.subject")}</div>
@@ -660,11 +660,11 @@ const MailApp = () => {
       <div className="a-body">
         <div className="a-sectionhead">{t("mail.replyHere")}</div>
         <div className="a-list">
-          <a className="a-list-row" href="mailto:onur.tellioglu@fau.de" style={{ textDecoration: "none", color: "inherit" }}>
+          <a className="a-list-row" href="mailto:onur@onurtellioglu.com" style={{ textDecoration: "none", color: "inherit" }}>
             <div className="lr-ico"><IconMail size={36}/></div>
             <div>
               <div className="lr-title">{t("contact.email")}</div>
-              <div className="lr-sub">onur.tellioglu@fau.de</div>
+              <div className="lr-sub">onur@onurtellioglu.com</div>
             </div>
             <div style={{ color: "var(--holo-cyan)", fontSize: 18, opacity: 0.6 }}>›</div>
           </a>
