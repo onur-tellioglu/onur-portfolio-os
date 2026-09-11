@@ -128,7 +128,7 @@ const MOBILE_STRINGS = {
   /* Recents preview captions */
   "rp.me":           { en: "Profile & intro", tr: "Profil ve tanıtım", de: "Profil & Intro" },
   "rp.skills": { en: "14 skills", tr: "14 yetenek", de: "14 Fähigkeiten" },
-  "rp.research": { en: "8 projects", tr: "8 proje", de: "8 Projekte" },
+  "rp.research": { en: "9 projects", tr: "9 proje", de: "9 Projekte" },
   "rp.projects": { en: "5 folders", tr: "5 klasör", de: "5 Ordner" },
   "rp.experience": { en: "5 roles · timeline", tr: "5 rol · zaman çizelgesi", de: "5 Rollen · Verlauf" },
   "rp.blog":         { en: "5 posts",         tr: "5 yazı",            de: "5 Beiträge" },

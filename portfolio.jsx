@@ -34,6 +34,14 @@ const PUBLICATIONS = [
     doi: "", url: "",
   },
   {
+    file: "agite.prj",
+    title: "AGITÉ: Headless E-Commerce Storefront",
+    authors: "Next.js 16 · Prisma · Postgres · MinIO · QNB Sanal POS · Resend",
+    journal: "agitebrand.com", year: "2026", topic: "E-commerce · Production",
+    abstract: "Storefront and admin panel for a Turkish direct-to-consumer fashion brand, live in production and self-hosted on a single VPS apart from DNS, payments and email. Session auth with better-auth, product images on MinIO, 3D Secure card payments through QNB Sanal POS and transactional email with Resend, with refunds, back-in-stock notifications, rate-limited public endpoints and critical-error alerting.",
+    doi: "", url: "https://agitebrand.com",
+  },
+  {
     file: "pomelohook.prj",
     title: "PomeloHook: Self-Hosted Webhook Relay",
     authors: "Go · SQLite · React · Vite · WebSocket",

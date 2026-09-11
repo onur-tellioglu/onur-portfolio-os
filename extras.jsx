@@ -182,6 +182,22 @@ IDLE through IGNITION and RUNNING to COOLING.
   "C:\\projects\\web\\": {
     files: [
       {
+        name: "agite_storefront.prj", type: "prj",
+        title: "AGITÉ: Headless E-Commerce Storefront",
+        stack: "Next.js · Prisma · Postgres · MinIO",
+        year: "2026",
+        body:
+`Storefront and admin panel for a Turkish direct-to-consumer
+fashion brand, live in production and self-hosted on one VPS.
+
+· 3D Secure card payments through QNB Sanal POS
+· Refunds, back-in-stock emails, critical-error alerts
+· Product images on MinIO, email with Resend`,
+        links: [
+          { label: "agitebrand.com", url: "https://agitebrand.com" },
+        ],
+      },
+      {
         name: "portfolio_os.prj", type: "prj",
         title: "portfoliOS (this site)",
         stack: "React · HTML · CSS",
