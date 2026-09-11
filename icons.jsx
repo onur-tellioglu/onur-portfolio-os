@@ -111,26 +111,150 @@ const TileVMD        = ({ size }) => <SkillTile file="microscope-icon.webp"     
 const TileAI         = ({ size }) => <SkillTile file="robot-head-with-brain-motif-icon.webp" size={size}/>;
 const TileUnity      = ({ size }) => <SkillTile file="puzzle-icon.webp"             size={size}/>;
 
+
+/* === Inline pixel-art tiles drawn for this portfolio (no matching WebP) === */
+/* Every one is a 16x16 grid so it stays crisp next to the WebP icons. */
+
+const IconChip = ({ size = 32 }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    {[3,6,9,12].map(y => <React.Fragment key={"p"+y}>
+      <rect x="0" y={y} width="3" height="1" fill="#9a9a9a"/>
+      <rect x="13" y={y} width="3" height="1" fill="#9a9a9a"/>
+    </React.Fragment>)}
+    {[3,6,9,12].map(x => <React.Fragment key={"q"+x}>
+      <rect x={x} y="0" width="1" height="3" fill="#9a9a9a"/>
+      <rect x={x} y="13" width="1" height="3" fill="#9a9a9a"/>
+    </React.Fragment>)}
+    <rect x="3" y="3" width="10" height="10" fill="#1d1d1d"/>
+    <rect x="3" y="3" width="10" height="1" fill="#3d3d3d"/>
+    <rect x="3" y="12" width="10" height="1" fill="#000"/>
+    <rect x="5" y="5" width="6" height="6" fill="#2f6f3f"/>
+    <rect x="6" y="6" width="4" height="1" fill="#5fbf6f"/>
+    <rect x="6" y="8" width="3" height="1" fill="#5fbf6f"/>
+    <rect x="4" y="4" width="1" height="1" fill="#c8a13a"/>
+  </svg>
+);
+
+const IconRobot = ({ size = 32 }) => <WIcon file="robot-head-with-brain-motif-icon.webp" size={size} alt="AI"/>;
+
+const TileTypeScript = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    <rect x="1" y="1" width="14" height="14" fill="#3178c6"/>
+    <rect x="1" y="1" width="14" height="1" fill="#5a9ae0"/>
+    <rect x="1" y="14" width="14" height="1" fill="#1f4e8c"/>
+    {/* T */}
+    <rect x="2" y="5" width="6" height="2" fill="#fff"/>
+    <rect x="4" y="7" width="2" height="5" fill="#fff"/>
+    {/* S */}
+    <rect x="9" y="5" width="5" height="2" fill="#fff"/>
+    <rect x="9" y="7" width="2" height="1" fill="#fff"/>
+    <rect x="9" y="8" width="5" height="2" fill="#fff"/>
+    <rect x="12" y="10" width="2" height="1" fill="#fff"/>
+    <rect x="9" y="11" width="5" height="1" fill="#fff"/>
+  </svg>
+);
+
+const TileGo = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    <rect x="3" y="1" width="2" height="3" fill="#00add8"/>
+    <rect x="11" y="1" width="2" height="3" fill="#00add8"/>
+    <rect x="3" y="3" width="10" height="10" fill="#00add8"/>
+    <rect x="2" y="5" width="1" height="6" fill="#00add8"/>
+    <rect x="13" y="5" width="1" height="6" fill="#00add8"/>
+    <rect x="3" y="3" width="10" height="1" fill="#5fd7f0"/>
+    <rect x="4" y="5" width="3" height="3" fill="#fff"/>
+    <rect x="9" y="5" width="3" height="3" fill="#fff"/>
+    <rect x="5" y="6" width="2" height="2" fill="#111"/>
+    <rect x="10" y="6" width="2" height="2" fill="#111"/>
+    <rect x="6" y="9" width="4" height="2" fill="#f6d2a2"/>
+    <rect x="7" y="10" width="2" height="1" fill="#b07b4f"/>
+    <rect x="3" y="12" width="10" height="1" fill="#0089ab"/>
+  </svg>
+);
+
+const TileSwift = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    <rect x="1" y="1" width="14" height="14" fill="#f05138"/>
+    <rect x="1" y="1" width="14" height="1" fill="#ff7a5c"/>
+    <rect x="1" y="14" width="14" height="1" fill="#b83318"/>
+    <rect x="9" y="3" width="3" height="2" fill="#fff"/>
+    <rect x="7" y="5" width="4" height="2" fill="#fff"/>
+    <rect x="5" y="7" width="4" height="2" fill="#fff"/>
+    <rect x="3" y="9" width="5" height="2" fill="#fff"/>
+    <rect x="4" y="11" width="7" height="2" fill="#fff"/>
+    <rect x="10" y="10" width="2" height="2" fill="#fff"/>
+  </svg>
+);
+
+const TileCpp = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    <rect x="1" y="1" width="14" height="14" fill="#00599c"/>
+    <rect x="1" y="1" width="14" height="1" fill="#3a86c8"/>
+    <rect x="1" y="14" width="14" height="1" fill="#00365f"/>
+    {/* C */}
+    <rect x="3" y="5" width="4" height="1" fill="#fff"/>
+    <rect x="2" y="6" width="1" height="4" fill="#fff"/>
+    <rect x="3" y="10" width="4" height="1" fill="#fff"/>
+    {/* ++ */}
+    <rect x="8" y="7" width="3" height="1" fill="#fff"/>
+    <rect x="9" y="6" width="1" height="3" fill="#fff"/>
+    <rect x="11" y="7" width="3" height="1" fill="#fff"/>
+    <rect x="12" y="6" width="1" height="3" fill="#fff"/>
+  </svg>
+);
+
+const TileNext = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    <rect x="5" y="1" width="6" height="1" fill="#000"/>
+    <rect x="3" y="2" width="10" height="1" fill="#000"/>
+    <rect x="2" y="3" width="12" height="2" fill="#000"/>
+    <rect x="1" y="5" width="14" height="6" fill="#000"/>
+    <rect x="2" y="11" width="12" height="2" fill="#000"/>
+    <rect x="3" y="13" width="10" height="1" fill="#000"/>
+    <rect x="5" y="14" width="6" height="1" fill="#000"/>
+    <rect x="5" y="5" width="2" height="7" fill="#fff"/>
+    <rect x="7" y="7" width="1" height="2" fill="#fff"/>
+    <rect x="8" y="8" width="1" height="2" fill="#fff"/>
+    <rect x="9" y="9" width="2" height="3" fill="#fff"/>
+    <rect x="9" y="5" width="2" height="3" fill="#fff"/>
+  </svg>
+);
+
+const TileNode = ({ size = 40 }) => (
+  <svg width={size} height={size} viewBox="0 0 16 16" shapeRendering="crispEdges">
+    <rect x="6" y="1" width="4" height="1" fill="#539e43"/>
+    <rect x="4" y="2" width="8" height="2" fill="#539e43"/>
+    <rect x="3" y="4" width="10" height="8" fill="#539e43"/>
+    <rect x="4" y="12" width="8" height="2" fill="#539e43"/>
+    <rect x="6" y="14" width="4" height="1" fill="#539e43"/>
+    <rect x="3" y="4" width="10" height="1" fill="#7fc46d"/>
+    <rect x="5" y="5" width="2" height="6" fill="#fff"/>
+    <rect x="9" y="5" width="2" height="6" fill="#fff"/>
+    <rect x="7" y="7" width="1" height="2" fill="#fff"/>
+    <rect x="8" y="8" width="1" height="2" fill="#fff"/>
+  </svg>
+);
+
+const TileBash = ({ size = 40 }) => <SkillTile file="terminal-icon.webp" size={size}/>;
+const TileGoLang = TileGo;
+
 const SKILL_TILES = {
   Python: TilePython,
-  MATLAB: TileMatlab,
-  R: TileR,
-  Java: TileJava,
-  JavaScript: TileJS,
-  PHP: TilePHP,
+  TypeScript: TileTypeScript,
+  Go: TileGo,
+  Swift: TileSwift,
+  "C++": TileCpp,
+  Bash: TileBash,
   React: TileReact,
-  HTML5: TileHTML,
-  CSS3: TileCSS,
-  WordPress: TileWordPress,
-  Git: TileGit,
-  Docker: TileDocker,
-  GROMACS: TileGromacs,
-  NWChem: TileNWChem,
-  VMD: TileVMD,
-  "AI/ML": TileAI,
-  Unity: TileUnity,
-  SQL: TileSQL,
+  "Next.js": TileNext,
+  "Node.js": TileNode,
   PostgreSQL: TilePostgreSQL,
+  Docker: TileDocker,
+  Git: TileGit,
+  SQL: TileSQL,
+  "AI/LLM": TileAI,
+  JavaScript: TileJS,
+  Java: TileJava,
 };
 
 /* === Real pixel-art portrait === */
@@ -144,8 +268,8 @@ const PortraitPlaceholder = ({ width = 220, height = 220 }) => (
     placeItems: "center",
   }}>
     <img
-      src="portfolios-assets/ibrahim-yagiz-akbayrak-portre-pixel-art.avif"
-      alt="Ibrahim Yağız Akbayrak — pixel-art portrait"
+      src="portfolios-assets/onur-portrait-placeholder.svg"
+      alt="Onur Tellioglu, portrait placeholder"
       draggable={false}
       style={{
         width: "100%",
@@ -167,6 +291,6 @@ Object.assign(window, {
   IconPin, IconLinkedIn, IconGitHub,
   IconAccessibility, IconPower, IconTerminal, IconSearch,
   IconCap, IconNote, IconPencilDoc, IconBulb, IconCalendar,
-  IconLandscape, IconStar, IconDiploma,
+  IconLandscape, IconStar, IconDiploma, IconChip, IconRobot,
   SKILL_TILES, PortraitPlaceholder,
 });
