@@ -180,7 +180,7 @@ const STRINGS = {
                     tr: "Almanya'daki bir üretim tesisi için kağıtsız operasyon platformu teslim etti, üretimde aktif",
                     de: "Papierlose Betriebsplattform für einen deutschen Fertigungsbetrieb geliefert, produktiv im Einsatz" },
 
-  "exp.2.role":   { en: "Chief IT Consultant", tr: "Baş BT Danışmanı", de: "Leitender IT-Berater" },
+  "exp.2.role":   { en: "IT Consultant", tr: "BT Danışmanı", de: "IT-Berater" },
   "exp.2.org":    { en: "Metarc Interior, Istanbul", tr: "Metarc Interior, İstanbul", de: "Metarc Interior, Istanbul" },
   "exp.2.period": { en: "Jul 2023 – Oct 2023", tr: "Tem 2023 – Eki 2023", de: "Jul 2023 – Okt 2023" },
   "exp.2.b0":     { en: "Rebuilt the full IT infrastructure of a corporate architecture firm",

@@ -124,7 +124,7 @@ const EXPERIENCE = [
   },
   {
     period: "Jul 2023 – Oct 2023",
-    role: "Chief IT Consultant",
+    role: "IT Consultant",
     org: "Metarc Interior, Istanbul",
     bullets: [
       "Rebuilt the full IT infrastructure of a corporate architecture firm",
