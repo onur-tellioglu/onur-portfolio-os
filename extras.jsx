@@ -143,7 +143,9 @@ const PROJECT_FOLDERS = {
 `Reviews a photo library one image at a time, learns what is blurry, and keeps, culls or undoes with a single gesture.
 
 · Submitted to App Store review`,
-        links: [],
+        links: [
+          { label: "cull.pomelostudios.net", url: "https://cull.pomelostudios.net" },
+        ],
       },
     ],
   },
@@ -412,7 +414,7 @@ const ProjectViewer = ({ file, z, onFocus, onClose }) => {
           <hr style={{ border: "none", borderTop: "1px dashed var(--shadow-m)", margin: "12px 0 8px" }}/>
           <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
             {file.links.map((l, i) => (
-              <button key={i} className="btn" onClick={() => alert(t("proj.placeholder"))}>
+              <button key={i} className="btn" onClick={() => l.url ? window.open(l.url, "_blank", "noreferrer") : alert(t("proj.placeholder"))}>
                 {l.label}
               </button>
             ))}
