@@ -316,7 +316,7 @@ const StickyNote = ({ z, onFocus, onClose }) => {
       <div style={{ fontWeight: 700, marginBottom: 4 }}>{t("note.l1")}</div>
       <div>{t("note.l2")}</div>
       <div>{t("note.l3")}</div>
-      <div style={{ marginTop: 8, textAlign: "right", fontStyle: "italic" }}>— I.Y.A.</div>
+      <div style={{ marginTop: 8, textAlign: "right", fontStyle: "italic" }}>- O.T.</div>
     </div>
   );
 };

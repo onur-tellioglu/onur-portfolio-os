@@ -55,7 +55,6 @@ const MOBILE_STRINGS = {
   "app.mail":        { en: "Mail",        tr: "Posta",        de: "Mail" },
   "app.photos":      { en: "Photos",      tr: "Fotoğraflar", de: "Fotos" },
   "app.cv":          { en: "CV",          tr: "CV",           de: "Lebenslauf" },
-  "app.linkedin":    { en: "LinkedIn",    tr: "LinkedIn",     de: "LinkedIn" },
   "app.github":      { en: "GitHub",      tr: "GitHub",       de: "GitHub" },
   "app.settings":    { en: "Settings",    tr: "Ayarlar",      de: "Einstellungen" },
   "app.phone":       { en: "Phone",       tr: "Telefon",      de: "Telefon" },
@@ -356,7 +355,6 @@ const APP_COLORS = {
   mail:       "#1a8fb3",
   photos:     "#b3357a",
   cv:         "#2a4a6e",
-  linkedin:   "#0a66c2",
   github:     "#1c1f24",
   settings:   "#3a3f48",
   phone:      "#2e8b57",
@@ -383,7 +381,6 @@ const APP_META = {
   mail:       { glyph: "Mail",      label: "app.mail",       color: APP_COLORS.mail },
   photos:     { glyph: "Photos",    label: "app.photos",     color: APP_COLORS.photos },
   cv:         { glyph: "Document",  label: "app.cv",         color: APP_COLORS.cv },
-  linkedin:   { glyph: "in",        label: "app.linkedin",   color: APP_COLORS.linkedin },
   github:     { glyph: "gh",        label: "app.github",     color: APP_COLORS.github },
   settings:   { glyph: "Settings",  label: "app.settings",   color: APP_COLORS.settings },
   phone:      { glyph: "Phone",     label: "app.phone",      color: APP_COLORS.phone },
@@ -592,7 +589,7 @@ const RecentCard = ({ appId, onPick, onDismiss }) => {
     projects: "rp.projects", experience: "rp.experience", blog: "rp.blog",
     mail: "rp.mail", photos: "rp.photos", settings: "rp.settings",
     phone: "rp.phone", browser: "rp.browser", camera: "rp.camera",
-    cv: "app.cv", linkedin: "app.linkedin", github: "app.github",
+    cv: "app.cv", github: "app.github",
   };
   return (
     <div className="a-recents-card" onClick={onPick}>
@@ -968,7 +965,6 @@ const AppScreenRouter = ({ appId, onOpen, onPhotoOpen }) => {
     case "blog":       return <BlogApp/>;
     case "mail":       return <MailApp/>;
     case "photos":     return <PhotosApp onPhotoOpen={onPhotoOpen}/>;
-    case "linkedin":   return <SocialApp kind="linkedin"/>;
     case "github":     return <SocialApp kind="github"/>;
     case "settings":   return <SettingsApp/>;
     case "phone":      return <PhoneApp/>;
