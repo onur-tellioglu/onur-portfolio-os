@@ -44,10 +44,7 @@ const IconFloppy   = ({ size = 32 }) => <WIcon file="floppy-disk-icon.webp"     
 const IconBriefcase= ({ size = 32 }) => <WIcon file="briefcase-icon.webp"        size={size} alt="Briefcase"/>;
 const IconBook     = ({ size = 32 }) => <WIcon file="bookshelf-icon.webp"        size={size} alt="Bookshelf"/>;
 const IconChart    = ({ size = 32 }) => <WIcon file="chart-icon.webp"            size={size} alt="Chart"/>;
-const IconMolecule = ({ size = 32 }) => <WIcon file="molecule-icon.webp"         size={size} alt="Molecule"/>;
-const IconFlask    = ({ size = 32 }) => <WIcon file="laboratory-test-tubes-icon.webp" size={size} alt="Lab"/>;
 const IconPin      = ({ size = 32 }) => <WIcon file="red-map-pin-icon.webp"      size={size} alt="Location"/>;
-const IconLinkedIn = ({ size = 32 }) => <WIcon file="LinkedIn-logo-icon.webp"    size={size} alt="LinkedIn"/>;
 const IconGitHub   = ({ size = 32 }) => <WIcon file="github-icon.webp"           size={size} alt="GitHub"/>;
 
 /* === New icons === */
@@ -62,7 +59,6 @@ const IconBulb     = ({ size = 32 }) => <WIcon file="bulb-icon.webp"            
 const IconCalendar = ({ size = 32 }) => <WIcon file="calendar-icon.webp"         size={size} alt="Calendar"/>;
 const IconLandscape= ({ size = 32 }) => <WIcon file="landscape-in-retro-frame-icon.webp" size={size} alt="Wallpaper"/>;
 const IconStar     = ({ size = 32 }) => <WIcon file="yellow-star-icon.webp"      size={size} alt="Games / Favorites"/>;
-const IconDiploma  = ({ size = 32 }) => <WIcon file="diploma-with-award-seal-icon.webp" size={size} alt="ORCID"/>;
 
 /* === IconCode kept as inline SVG (no matching WebP) === */
 const IconCode = ({ size = 32 }) => (
@@ -287,10 +283,10 @@ Object.assign(window, {
   WIcon,
   IconComputer, IconFolder, IconResearch, IconGlobe, IconWrench,
   IconTrash, IconMail, IconDoc, IconFloppy, IconBriefcase,
-  IconBook, IconCode, IconChart, IconMolecule, IconFlask,
-  IconPin, IconLinkedIn, IconGitHub,
+  IconBook, IconCode, IconChart,
+  IconPin, IconGitHub,
   IconAccessibility, IconPower, IconTerminal, IconSearch,
   IconCap, IconNote, IconPencilDoc, IconBulb, IconCalendar,
-  IconLandscape, IconStar, IconDiploma, IconChip, IconRobot,
+  IconLandscape, IconStar, IconChip, IconRobot,
   SKILL_TILES, PortraitPlaceholder,
 });

@@ -121,11 +121,9 @@ const STRINGS = {
                             tr: "İlginç projelere, laboratuvar işlerine ve serbest işlere açığım: cihaz yazılımından LLM ajanlarına ve web ürünlerine kadar. Sağdaki kanallardan birinden yazman yeterli, dönüş yaparım.",
                             de: "Ich bin offen für spannende Projekte, Laborarbeit und Freelance-Aufträge, von Gerätesoftware über LLM-Agenten bis zu Webprodukten. Schreib mir über einen der Kanäle rechts, ich melde mich." },
   "contact.email":        { en: "Email",       tr: "E-posta",   de: "E-Mail" },
-  "contact.linkedin":     { en: "LinkedIn",    tr: "LinkedIn",  de: "LinkedIn" },
   "contact.github":       { en: "GitHub",      tr: "GitHub",    de: "GitHub" },
   "contact.site":         { en: "Website",     tr: "Web sitesi", de: "Webseite" },
   "contact.studio":       { en: "Study platform", tr: "Çalışma platformu", de: "Lernplattform" },
-  "contact.orcid":        { en: "ORCID",       tr: "ORCID",     de: "ORCID" },
   "contact.location":     { en: "Location",    tr: "Konum",     de: "Standort" },
   "contact.locationVal":  { en: "Nuremberg, Germany", tr: "Nürnberg, Almanya", de: "Nürnberg, Deutschland" },
   "contact.cv":           { en: "Download CV", tr: "CV İndir",  de: "Lebenslauf" },
@@ -211,9 +209,9 @@ const STRINGS = {
                     de: "Praktische Benchmark-Tests; DNS, SSL, Cloudflare und Security-Härtung verwaltet" },
 
   /* Sticky note */
-  "note.l1": { en: "Curious mind.",     tr: "Meraklı zihin.",      de: "Neugieriger Geist." },
-  "note.l2": { en: "Clean code.",       tr: "Temiz kod.",          de: "Sauberer Code." },
-  "note.l3": { en: "Better tomorrow.",  tr: "Daha iyi bir yarın.", de: "Besseres Morgen." },
+  "note.l1": { en: "Measure first.",    tr: "Önce ölç.",           de: "Erst messen." },
+  "note.l2": { en: "Then write it.",    tr: "Sonra yaz.",          de: "Dann schreiben." },
+  "note.l3": { en: "Then ship it.",     tr: "Sonra yayına al.",    de: "Dann ausliefern." },
 
   /* Welcome */
   "welcome.title": { en: "Welcome to portfoliOS",

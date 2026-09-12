@@ -768,7 +768,7 @@ const PhotosApp = ({ onPhotoOpen }) => {
   );
 };
 
-/* ---------- SOCIAL placeholder (LinkedIn/GitHub) ---------- */
+/* ---------- SOCIAL placeholder (GitHub) ---------- */
 const SocialApp = ({ kind }) => {
   const t = useT();
   const meta = APP_META[kind];
@@ -790,9 +790,7 @@ const SocialApp = ({ kind }) => {
           Onur Tellioglu
         </div>
         <div style={{ fontSize: 13, color: "var(--holo-text-dim)", marginTop: 6 }}>
-          {kind === "linkedin"
-            ? "Computer Science · Researcher · Web"
-            : "@onur-tellioglu"}
+          @onur-tellioglu
         </div>
         <div style={{ marginTop: 26 }}>
           <a className="a-btn solid" href={url} target="_blank" rel="noreferrer"
@@ -807,9 +805,7 @@ const SocialApp = ({ kind }) => {
           textAlign: "left", fontSize: 12.5, color: "#bcc4cc",
           lineHeight: 1.55,
         }}>
-          {kind === "linkedin"
-            ? "Connecting on LinkedIn is a great way to reach out about collaborations, internships, or interesting research."
-            : "Source for ctscan, PomeloHook and a few side projects lives here."}
+          Source for ctscan, PomeloHook and a few side projects lives here.
         </div>
       </div>
     </>
