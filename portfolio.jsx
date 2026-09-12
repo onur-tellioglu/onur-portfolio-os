@@ -79,7 +79,7 @@ const PUBLICATIONS = [
     authors: "Swift · SwiftUI · Vision",
     journal: "App Store review", year: "2026", topic: "iOS",
     abstract: "A SwiftUI app that reviews a photo library one image at a time, learns what is blurry, and lets you keep, cull or undo with a single gesture. Submitted to App Store review.",
-    doi: "", url: "",
+    doi: "", url: "https://cull.pomelostudios.net",
   },
 ];
 
